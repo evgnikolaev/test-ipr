@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'Gotham Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/gotham-pro/gotham-pro-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Verdana';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/verdana/Verdana.woff2') format('woff2'),
+  url('../fonts/verdana/Verdana.woff') format('woff');
+}

@@ -1,3 +1,103 @@
 .user-text {
-  
+  @include text-default;
+
+  p {
+    margin: rem(24) 0;
+  }
+
+  .text-lead {
+    margin-bottom: rem(20);
+  }
+
+  ul, ol {
+    margin: rem(20) 0;
+
+    li {
+      position: relative;
+      padding-left: rem(56);
+      margin-bottom: rem(29);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  ul {
+    li {
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: rem(11);
+        left: rem(2);
+        width: rem(20);
+        height: rem(2);
+        background-color: $color-blue;
+      }
+    }
+  }
+
+  ol {
+    counter-reset: list;
+
+    li {
+      &:before {
+        counter-increment: list;
+
+        content: counter(list);
+        display: block;
+        position: absolute;
+        top: rem(0);
+        left: rem(0);
+        color: $color-blue;
+      }
+
+      &:nth-child(-n+9):before {
+        content: "0" counter(list);
+      }
+    }
+  }
+
+
+  & > :first-child {
+    margin-bottom: 0;
+  }
+
+  & > :last-child {
+    margin-bottom: 0;
+  }
+
+
+  a {
+    display: inline-block;
+    color: $color-blue;
+    text-decoration: none;
+
+    @include media-breakpoint-up(lg) {
+      position: relative;
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: rem(-4);
+        left: 0;
+        width: 100%;
+        height: rem(5);
+        background-image: linear-gradient($color-blue, $color-blue);
+        background-size: 0 2px;
+        background-position: 100% 100%;
+        background-repeat: no-repeat;
+        @include defaultTransition(background-size);
+      }
+
+      &:hover {
+        &:after {
+          background-position: 0 100%;
+          background-size: 100% 2px;
+        }
+      }
+    }
+
+  }
 }

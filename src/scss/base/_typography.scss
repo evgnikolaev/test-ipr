@@ -7,4 +7,50 @@ html {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin: 0;
+  font-style: normal;
+  font-weight: 400;
+}
+
+h1, .h1 {
+  @include h1;
+}
+
+h2, .h2 {
+  @include h2;
+}
+
+h3, .h3 {
+  @include h3;
+}
+
+h4, .h4 {
+  @include h4;
+}
+
+h5, .h5 {
+  @include h5;
+}
+
+h6, .h6 {
+  @include h6;
+}
+
+.text-lead {
+  @include text-lead;
+}
+
+.text-default {
+  @include text-default;
+}
+
+.text-label {
+  @include text-label;
+}
+
+.text-small {
+  @include text-small;
+}
+
+.text-factor {
+  @include text-factor;
 }

@@ -81,6 +81,11 @@ ul ol {
   margin-bottom: 0;
 }
 
+ul,ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+
 dt {
   font-weight: 400;
 }

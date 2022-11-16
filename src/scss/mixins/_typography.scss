@@ -1,7 +1,106 @@
-@mixin h1 {}
+@mixin h1 {
+  font-family: $ff-title;
+  font-size: rem(30);
+  line-height: rem(36);
 
-@mixin h2 {}
+  @include media-breakpoint-up(md) {
+    font-size: rem(48);
+    line-height: rem(58);
+  }
+}
 
-@mixin h3 {}
+@mixin h2 {
+  font-family: $ff-title;
+  font-size: rem(24);
+  line-height: rem(31);
 
-@mixin h4 {}
+  @include media-breakpoint-up(md) {
+    font-size: rem(32);
+    line-height: rem(45);
+  }
+}
+
+@mixin h3 {
+  font-family: $ff-title;
+  font-size: rem(20);
+  line-height: rem(28);
+
+  @include media-breakpoint-up(md) {
+    font-size: rem(24);
+    line-height: rem(34);
+  }
+}
+
+@mixin h4 {
+  font-family: $ff-title;
+  font-size: rem(18);
+  line-height: rem(24);
+
+  @include media-breakpoint-up(md) {
+    font-size: rem(20);
+    line-height: rem(28);
+  }
+}
+
+@mixin h5 {
+  font-family: $ff-title;
+  font-size: rem(16);
+  line-height: rem(22);
+
+  @include media-breakpoint-up(md) {
+    font-size: rem(18);
+    line-height: rem(26);
+  }
+}
+
+@mixin h6 {
+  font-family: $ff-title;
+  font-size: rem(14);
+  line-height: rem(20);
+
+  @include media-breakpoint-up(md) {
+    font-size: rem(16);
+    line-height: rem(24);
+  }
+}
+
+@mixin text-lead {
+  font-size: rem(18);
+  line-height: rem(25);
+  font-family: $ff-title;
+}
+
+@mixin text-default {
+  font-size: rem(14);
+  line-height: rem(23);
+
+  @include media-breakpoint-up(md) {
+    font-size: rem(15);
+    line-height: rem(25);
+  }
+}
+
+
+@mixin text-label {
+  font-size: rem(11);
+  line-height: rem(17.6);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+
+@mixin text-small {
+  font-size: rem(13);
+  line-height: rem(20.8);
+}
+
+@mixin text-factor {
+  font-family: $ff-title;
+  font-size: rem(48);
+  line-height: rem(52.8);
+
+  @include media-breakpoint-up(md) {
+    font-size: rem(60);
+    line-height: rem(66);
+  }
+}
