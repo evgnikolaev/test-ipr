@@ -2,6 +2,31 @@
 
 {% block content %}
 
-    atoms page
+    {# button #}
+    <div class="py-40">
+        <div class="container">
+            {% for button in buttons %}
+                <div class="py-8">
+                    {% view "@button" with {
+                        button:button
+                    } %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    {# button #}
+    <div class="py-40 bg-blue">
+        <div class="container">
+            {% for button in buttons2 %}
+                <div class="mb-16">
+                    {% view '@button' with {
+                        button: button
+                    } %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
 
 {% endblock %}

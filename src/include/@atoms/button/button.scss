@@ -1,0 +1,89 @@
+.button {
+  $root: &;
+
+  font-family: $ff-base;
+  font-size: 0;
+  padding: rem(18) rem(32);
+  display: inline-block;
+  border: 2px solid $color-blue;
+  background-color: transparent;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  color: $color-black;
+
+  @media (any-hover: hover) {
+    @include defaultTransition(background-color, color);
+
+    &:hover {
+      background-color: $color-blue;
+      color: #fff;
+    }
+  }
+
+  &--light {
+    border: 2px solid $color-light-blue;
+    color: $color-white;
+
+    @media (any-hover: hover) {
+      @include defaultTransition(background-color);
+
+      &:hover {
+        background-color: $color-light-blue;
+      }
+    }
+  }
+
+
+  &:disabled,
+  &--disabled {
+    pointer-events: none;
+    color: $color-gray;
+    border-color: $color-gray;
+  }
+
+  &:disabled#{$root}--light,
+  &--disabled#{$root}--light {
+    color: rgba($color-white, 0.5);
+    border-color: rgba($color-white, 0.5);
+  }
+
+  &__text {
+    @include text-default;
+  }
+
+
+  &--has-icon {
+    display: inline-flex;
+    gap: rem(24);
+    align-items: center;
+  }
+
+
+  &__icon {
+    color: $color-blue;
+
+    @media (any-hover: hover) {
+      @include defaultTransition(color);
+
+      #{$root}:hover & {
+        color: #fff;
+      }
+    }
+
+    #{$root}:disabled &,
+    #{$root}--disabled & {
+      color: $color-gray;
+    }
+
+    #{$root}--light & {
+      color: $color-white;
+    }
+
+    #{$root}--light:disabled &,
+    #{$root}--light#{$root}--disabled & {
+      color: rgba($color-white, 0.5);
+    }
+  }
+
+}

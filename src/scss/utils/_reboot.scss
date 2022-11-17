@@ -81,7 +81,7 @@ ul ol {
   margin-bottom: 0;
 }
 
-ul,ol {
+ul, ol {
   list-style-type: none;
   padding-left: 0;
 }
@@ -129,10 +129,7 @@ sup {
 a {
   text-decoration: none;
   background-color: transparent;
-
-  &:hover {
-    text-decoration: underline;
-  }
+  color: $color-black;
 }
 
 

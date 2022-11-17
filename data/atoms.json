@@ -1,3 +1,124 @@
 {
-	"title": "Главная"
+  "title": "Главная",
+  "buttons": [
+    {
+      "text": "Подробнее",
+      "title": "Подробнее"
+    },
+    {
+      "href": "javascript:void(0)",
+      "text": "Подробнее",
+      "title": "Подробнее"
+    },
+    {
+      "text": "Подробнее",
+      "title": "Подробнее",
+      "disabled": true
+    },
+    {
+      "href": "javascript:void(0)",
+      "text": "Подробнее",
+      "title": "Подробнее",
+      "disabled": true
+    },
+
+
+    {
+      "text": "Подробнее",
+      "title": "Подробнее",
+      "icon": {
+        "name": "24/arrow-right"
+      }
+    },
+    {
+      "href": "javascript:void(0);",
+      "text": "Подробнее",
+      "title": "Подробнее",
+      "icon": {
+        "name": "24/arrow-right"
+      }
+    },
+    {
+      "text": "Подробнее",
+      "title": "Подробнее",
+      "icon": {
+        "name": "24/arrow-right"
+      },
+      "disabled": true
+    },
+    {
+      "href": "javascript:void(0)",
+      "text": "Подробнее",
+      "title": "Подробнее",
+      "icon": {
+        "name": "24/arrow-right"
+      },
+      "disabled": true
+    }
+  ],
+
+  "buttons2": [
+    {
+      "text": "Подробнее",
+      "title": "Подробнее",
+      "theme": "light"
+    },
+    {
+      "href": "javascript:void(0)",
+      "text": "Подробнее",
+      "title": "Подробнее",
+      "theme": "light"
+    },
+    {
+      "text": "Подробнее",
+      "title": "Подробнее",
+      "disabled": true,
+      "theme": "light"
+    },
+    {
+      "href": "javascript:void(0)",
+      "text": "Подробнее",
+      "title": "Подробнее",
+      "disabled": true,
+      "theme": "light"
+    },
+
+
+    {
+      "text": "Подробнее",
+      "title": "Подробнее",
+      "icon": {
+        "name": "24/arrow-right"
+      },
+      "theme": "light"
+    },
+    {
+      "href": "javascript:void(0);",
+      "text": "Подробнее",
+      "title": "Подробнее",
+      "icon": {
+        "name": "24/arrow-right"
+      },
+      "theme": "light"
+    },
+    {
+      "text": "Подробнее",
+      "title": "Подробнее",
+      "icon": {
+        "name": "24/arrow-right"
+      },
+      "disabled": true,
+      "theme": "light"
+    },
+    {
+      "href": "javascript:void(0)",
+      "text": "Подробнее",
+      "title": "Подробнее",
+      "icon": {
+        "name": "24/arrow-right"
+      },
+      "disabled": true,
+      "theme": "light"
+    }
+  ]
 }
