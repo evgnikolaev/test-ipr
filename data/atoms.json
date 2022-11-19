@@ -120,5 +120,81 @@
       "disabled": true,
       "theme": "light"
     }
+  ],
+
+  "links": [
+    {
+      "text": "Все программы",
+      "title": "Все программы"
+    },
+    {
+      "href": "javascript:void(0);",
+      "text": "Все программы",
+      "title": "Все программы"
+    },
+    {
+      "text": "Все программы",
+      "title": "Все программы",
+      "icon": {
+        "name": "24/arrow-right"
+      }
+    },
+    {
+      "href": "javascript:void(0);",
+      "text": "Все программы",
+      "title": "Все программы",
+      "icon": {
+        "name": "24/arrow-right"
+      }
+    },
+    {
+      "href": "javascript:void(0);",
+      "text": "Все программы",
+      "title": "Все программы",
+      "disabled": true,
+      "icon": {
+        "name": "24/arrow-right"
+      }
+    }
+  ],
+  "links2": [
+    {
+      "text": "Все программы",
+      "title": "Все программы",
+      "theme": "light"
+    },
+    {
+      "href": "javascript:void(0);",
+      "text": "Все программы",
+      "title": "Все программы",
+      "theme": "light"
+    },
+    {
+      "text": "Все программы",
+      "title": "Все программы",
+      "theme": "light",
+      "icon": {
+        "name": "24/arrow-right"
+      }
+    },
+    {
+      "href": "javascript:void(0);",
+      "text": "Все программы",
+      "title": "Все программы",
+      "theme": "light",
+      "icon": {
+        "name": "24/arrow-right"
+      }
+    },
+    {
+      "href": "javascript:void(0);",
+      "text": "Все программы",
+      "title": "Все программы",
+      "theme": "light",
+      "disabled": true,
+      "icon": {
+        "name": "24/arrow-right"
+      }
+    }
   ]
 }

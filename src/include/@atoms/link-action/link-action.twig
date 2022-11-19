@@ -1,0 +1,18 @@
+
+    <a href="{{ link.href }}"
+       class="link-action
+                {% if link.disabled %} link-action--disabled{% endif %}
+                {% if not link.not_icon_animate %}link-icon--animate{% endif %}
+                {% if link.theme %} link-action--{{ link.theme }}{% endif %}
+                {% if link.onlyIcon %}link-action--only-icon{% endif %}"
+       {% if link.title %}title="{{ link.title }}"{% endif %}
+    >
+        {% if link.text %}
+            <span class="link-action__text">{{ link.text }}</span>
+        {% endif %}
+        {% if link.icon %}
+            {% view "@icon" with {
+                icon:link.icon
+            } %}
+        {% endif %}
+    </a>

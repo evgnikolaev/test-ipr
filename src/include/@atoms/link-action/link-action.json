@@ -1,0 +1,11 @@
+{
+  "link": {
+    "href": "javascript:void(0)",
+    "icon": {
+      "name": "24/arrow-right"
+    },
+    "text": "Подробнее",
+    "title": "Подробнее",
+    "disabled": false
+  }
+}

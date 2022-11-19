@@ -1,0 +1,79 @@
+.link-action {
+  $root: &;
+
+  display: inline-flex;
+  align-items: center;
+  font-size: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: $color-black;
+
+  &__text {
+    position: relative;
+    display: block;
+    @include text-default;
+
+    &:after {
+      position: absolute;
+      left: 0;
+      bottom: rem(-6);
+      width: 100%;
+      height: rem(26);
+      content: "";
+      background-size: 0 2px;
+      background-position: 100% 100%;
+      background-image: linear-gradient($color-black, $color-black);
+      background-repeat: no-repeat;
+      will-change: background-size;
+      @include defaultTransition(background-size);
+
+      #{$root}--light & {
+        background-image: linear-gradient($color-white, $color-white);
+      }
+    }
+
+    #{$root}:hover & {
+      &:after {
+        background-position: 0 100%;
+        background-size: 100% 2px;
+      }
+    }
+
+    #{$root}--light & {
+      color: $color-white;
+    }
+  }
+
+  .icon {
+    color: $color-blue;
+    margin-left: rem(16);
+    transform: translateX(0);
+    @include defaultTransition(transform);
+  }
+
+
+  @include media-breakpoint-up(lg) {
+    &:hover .icon {
+      transform: translateX(rem(8));
+    }
+  }
+
+
+  &--light .icon {
+    color: $color-light-blue;
+  }
+
+
+  &--disabled,
+  &:disabled {
+    pointer-events: none;
+    color: $color-gray;
+
+    .icon {
+      color: $color-gray;
+    }
+  }
+}
