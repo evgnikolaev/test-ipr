@@ -6,6 +6,7 @@ $color-light-blue: #00BCFF !default;
 
 $color-gray: #8C9198 !default;
 $color-light-gray: #F4F5F8 !default;
+$color-light-gray2: #DCDEE1 !default;
 
 // Color system:
 // 'colorName': 'color'
@@ -16,4 +17,5 @@ $colors: (
         "light-blue": $color-light-blue,
         "gray": $color-gray,
         "light-gray": $color-light-gray,
+        "light-gray2": $color-light-gray2,
 );

@@ -2,6 +2,26 @@
 
 {% block content %}
 
+    {# nav-arrows #}
+    <div class="py-40">
+        <div class="container">
+            {% view "@nav-arrows" %}
+        </div>
+    </div>
+
+    {# nav-arrows #}
+    <div class="py-40  bg-blue">
+        <div class="container">
+            {% view "@nav-arrows" with {
+                nav_arrows:{
+                    theme:"light"
+                }
+            } %}
+        </div>
+    </div>
+
+
+
     {# button #}
     <div class="py-40">
         <div class="container">

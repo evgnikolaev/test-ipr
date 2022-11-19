@@ -1,0 +1,49 @@
+.nav-arrows {
+  $root: &;
+
+  display: inline-flex;
+  position: relative;
+
+  &__buttons {
+    box-shadow: inset 0 0 0 2px $color-light-gray2;
+    display: flex;
+
+    #{$root}--light & {
+      box-shadow: inset 0 0 0 2px $color-light-blue;
+    }
+  }
+
+
+  &__button {
+    padding: 0;
+    margin: 0;
+    width: rem(60);
+    height: rem(60);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-black;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    @include media-breakpoint-up(lg) {
+      @include defaultTransition(background-color, color);
+      &:hover {
+        background-color: $color-blue;
+        color: $color-white;
+      }
+      #{$root}--light &:hover {
+        background-color: $color-light-blue;
+      }
+    }
+
+    &:disabled {
+      pointer-events: none;
+      color: $color-light-gray2;
+    }
+
+    #{$root}--light & {
+      color: $color-white;
+    }
+  }
+}

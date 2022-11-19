@@ -1,0 +1,18 @@
+<div class="nav-arrows {% if nav_arrows.theme %} nav-arrows--{{ nav_arrows.theme }} {% endif %}">
+	<div class="nav-arrows__buttons">
+		<button class="nav-arrows__button" data-nav-arrow-prev title="{{ text_helpers.backward?:'Назад' }}">
+			{% view "@icon" with {
+				icon:{
+					name:"24/arrow-prev"
+				}
+			} %}
+		</button>
+		<button class="nav-arrows__button" data-nav-arrow-next title="{{ text_helpers.backward?:'Вперед' }}">
+			{% view "@icon" with {
+				icon:{
+					name:"24/arrow-next"
+				}
+			} %}
+		</button>
+	</div>
+</div>
