@@ -21,8 +21,6 @@
       "title": "Подробнее",
       "disabled": true
     },
-
-
     {
       "text": "Подробнее",
       "title": "Подробнее",
@@ -56,7 +54,6 @@
       "disabled": true
     }
   ],
-
   "buttons2": [
     {
       "text": "Подробнее",
@@ -82,8 +79,6 @@
       "disabled": true,
       "theme": "light"
     },
-
-
     {
       "text": "Подробнее",
       "title": "Подробнее",
@@ -121,7 +116,6 @@
       "theme": "light"
     }
   ],
-
   "links": [
     {
       "text": "Все программы",
@@ -195,6 +189,144 @@
       "icon": {
         "name": "24/arrow-right"
       }
+    }
+  ],
+  "fields": [
+    {
+      "input": true,
+      "id": "input-1",
+      "name": "input-1",
+      "placeholder": "Ваш email",
+      "required": true
+    },
+    {
+      "input": true,
+      "id": "input-2",
+      "name": "input-2",
+      "placeholder": "Ваш email",
+      "required": true,
+      "disabled": true
+    },
+    {
+      "checkbox": true,
+      "id": "checkbox-1",
+      "name": "checkbox-1",
+      "required": true,
+      "text": "checkbox text"
+    },
+    {
+      "radio": true,
+      "id": "radio-1",
+      "name": "radio-1",
+      "required": true,
+      "text": "radio text"
+    },
+    {
+      "checkbox": true,
+      "id": "checkbox-2",
+      "name": "checkbox-2",
+      "required": true,
+      "text": "checkbox text",
+      "disabled": true
+    },
+    {
+      "radio": true,
+      "id": "radio-2",
+      "name": "radio-2",
+      "required": true,
+      "text": "radio text",
+      "disabled": true
+    },
+    {
+      "checkbox": true,
+      "id": "checkbox-2",
+      "name": "checkbox-2",
+      "required": true,
+      "text": "checkbox text",
+      "disabled": true,
+      "checked": true
+    },
+    {
+      "radio": true,
+      "id": "radio-2",
+      "name": "radio-2",
+      "required": true,
+      "text": "radio text",
+      "disabled": true,
+      "checked": true
+    }
+  ],
+  "fields2": [
+    {
+      "input": true,
+      "id": "input-1",
+      "name": "input-1",
+      "placeholder": "Ваш email",
+      "required": true,
+      "theme": "light"
+    },
+    {
+      "input": true,
+      "id": "input-2",
+      "name": "input-2",
+      "placeholder": "Ваш email",
+      "required": true,
+      "disabled": true,
+      "theme": "light"
+    },
+    {
+      "checkbox": true,
+      "id": "checkbox-1",
+      "name": "checkbox-1",
+      "required": true,
+      "text": "checkbox text",
+      "theme": "light"
+    },
+    {
+      "radio": true,
+      "id": "radio-1",
+      "name": "radio-1",
+      "required": true,
+      "text": "radio text",
+      "theme": "light"
+    },
+    {
+      "checkbox": true,
+      "id": "checkbox-2",
+      "name": "checkbox-2",
+      "required": true,
+      "text": "checkbox text",
+      "disabled": true,
+      "theme": "light"
+    },
+    {
+      "radio": true,
+      "id": "radio-2",
+      "name": "radio-2",
+      "required": true,
+      "text": "radio text",
+      "disabled": true,
+      "theme": "light"
+    },
+    {
+      "checkbox": true,
+      "id": "checkbox-2",
+      "name": "checkbox-2",
+      "required": true,
+      "text": "checkbox text",
+      "disabled": true,
+      "checked": true,
+      "theme": "light"
+    },
+    {
+      "radio": true,
+      "id": "radio-2",
+      "name": "radio-2",
+      "required": true,
+      "text": "radio text",
+      "disabled": true,
+      "checked": true,
+      "theme": "light"
     }
   ]
 }

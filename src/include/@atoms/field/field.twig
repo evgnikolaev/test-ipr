@@ -1,0 +1,28 @@
+<div class="field{% if field.type == 'hidden' %} field--hidden{% endif %}{% if field.required %} field--required{% endif %}">
+	{% if field.label %}
+		<label for="{{ field.id }}" class="field__label">{{ field.label }}</label>
+	{% endif %}
+	<div class="field__control">
+		{% if field.input %}
+			{% view '@field-input' with {
+				field: field
+			} %}
+		{% elseif field.textarea %}
+			{% view '@field-textarea' with {
+				field: field
+			} %}
+		{% elseif field.select %}
+			{% view '@field-select' with {
+				field: field
+			} %}
+		{% elseif field.checkbox or field.radio %}
+			{% view '@field-checkbox' with {
+				field: field
+			} %}
+		{% elseif field.switch %}
+			{% view '@field-switch' with {
+				field: field
+			} %}
+		{% endif %}
+	</div>
+</div>

@@ -1,0 +1,35 @@
+.field {
+	$root: &;
+
+	display: block;
+	font-size: 0;
+	line-height: 1;
+
+	&--hidden {
+		@include visually-hidden;
+	}
+
+	&__label {
+		@include text-small;
+		margin-bottom: rem(8);
+
+		#{$root}--required & {
+			&:after {
+				color: $color-error;
+				content: "*";
+				margin-left: rem(4);
+			}
+		}
+	}
+
+	&__control {
+		position: relative;
+	}
+
+	&__error {
+		position: absolute;
+		left: 0;
+		top: calc(100% + #{rem(4)});
+		width: 100%;
+	}
+}

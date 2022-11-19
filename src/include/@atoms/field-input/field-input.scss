@@ -1,0 +1,44 @@
+.input {
+  $root: &;
+
+  @include text-default;
+
+  display: block;
+  width: 100%;
+  padding: 0 rem(24);
+  color: $color-black;
+  height: rem(65);
+  border: 2px solid $color-light-gray;
+  background: transparent;
+  @include defaultTransition(border-color);
+
+  &::placeholder {
+    opacity: 1;
+    @include text-small;
+    color: $color-gray;
+  }
+
+
+  &:focus, &:hover {
+    border-color: $color-blue;
+    outline: none;
+  }
+
+  &--light {
+    background-color: $color-white;
+    border-color: transparent;
+
+    &:focus, &:hover {
+      border-color: $color-light-blue;
+    }
+  }
+
+
+  &:disabled {
+    border-color: rgba($color-gray, 0.5);
+
+    &::placeholder {
+      color: rgba($color-gray, 0.5);
+    }
+  }
+}
