@@ -328,5 +328,118 @@
       "checked": true,
       "theme": "light"
     }
+  ],
+  "form": [
+    {
+      "input": true,
+      "id": "input-form-1",
+      "name": "input-form-1",
+      "placeholder": "Имя",
+      "required": true
+    },
+    {
+      "input": true,
+      "id": "input-tel-form-1",
+      "name": "input-tel-form-1",
+      "type": "tel",
+      "placeholder": "Телефон",
+      "required": true
+    },
+    {
+      "input": true,
+      "id": "input-email-form-1",
+      "name": "input-email-form-1",
+      "type": "email",
+      "placeholder": "E-mail",
+      "required": true
+    },
+    {
+      "textarea": true,
+      "id": "textarea-form-1",
+      "name": "textarea-form-1",
+      "placeholder": "Описание",
+      "required": true
+    },
+    {
+      "textarea": true,
+      "id": "textarea-form-2",
+      "name": "textarea-form-2",
+      "placeholder": "Описание",
+      "disabled": true
+    },
+    {
+      "checkbox": true,
+      "id": "checkbox-form-1",
+      "name": "checkbox-form-1",
+      "text": "checkbox",
+      "required": true
+    },
+    {
+      "radio": true,
+      "id": "radio-form-1",
+      "name": "radio-form-1",
+      "text": "radio",
+      "required": true
+    }
+  ],
+  "form2": [
+    {
+      "input": true,
+      "id": "input-form-1",
+      "name": "input-form-1",
+      "placeholder": "Имя",
+      "required": true,
+      "theme": "light"
+    },
+    {
+      "input": true,
+      "id": "input-tel-form-1",
+      "name": "input-tel-form-1",
+      "type": "tel",
+      "placeholder": "Телефон",
+      "required": true,
+      "theme": "light"
+    },
+    {
+      "input": true,
+      "id": "input-email-form-1",
+      "name": "input-email-form-1",
+      "type": "email",
+      "placeholder": "E-mail",
+      "required": true,
+      "theme": "light"
+    },
+    {
+      "textarea": true,
+      "id": "textarea-form-1",
+      "name": "textarea-form-1",
+      "placeholder": "Описание",
+      "required": true,
+      "theme": "light"
+    },
+    {
+      "textarea": true,
+      "id": "textarea-form-2",
+      "name": "textarea-form-2",
+      "placeholder": "Описание",
+      "disabled": true,
+      "theme": "light"
+    },
+    {
+      "checkbox": true,
+      "id": "checkbox-form-1",
+      "name": "checkbox-form-1",
+      "text": "checkbox",
+      "required": true,
+      "theme": "light"
+    },
+    {
+      "radio": true,
+      "id": "radio-form-1",
+      "name": "radio-form-1",
+      "text": "radio",
+      "required": true,
+      "theme": "light"
+    }
   ]
 }

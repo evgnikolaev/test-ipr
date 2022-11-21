@@ -2,6 +2,52 @@
 
 {% block content %}
 
+    {# form #}
+    <div class="py-40">
+        <div class="container">
+            <form action="" data-parsley-validate>
+                {% for field in form %}
+                    <div class="mb-24">
+                        {% view "@field" with {
+                            field:field
+                        } %}
+                    </div>
+                {% endfor %}
+
+                {% view "@button" with {
+                    button: {
+                        title: "submit",
+                        text: "submit",
+                        type: "submit"
+                    }
+                } %}
+            </form>
+        </div>
+    </div>
+
+    {# form #}
+    <div class="py-40 bg-blue">
+        <div class="container">
+            <form action="" data-parsley-validate>
+                {% for field in form2 %}
+                    <div class="mb-24">
+                        {% view "@field" with {
+                            field:field
+                        } %}
+                    </div>
+                {% endfor %}
+
+                {% view "@button" with {
+                    button: {
+                        title: "submit",
+                        text: "submit",
+                        type: "submit",
+                        theme:"light"
+                    }
+                } %}
+            </form>
+        </div>
+    </div>
 
     {# field #}
     <div class="py-40">

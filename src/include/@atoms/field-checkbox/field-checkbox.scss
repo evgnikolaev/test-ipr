@@ -120,6 +120,10 @@
         background-color: rgba($color-white,0.5);
       }
     }
+
+    #{$root}.parsley-error & {
+      border-color: $color-error;
+    }
   }
 
 
@@ -137,6 +141,10 @@
 
     #{$root}--light #{$root}__input:disabled ~ & {
       color: rgba($color-white, 0.5);
+    }
+
+    & ~ .parsley-errors-list {
+      display: none;
     }
   }
 }
