@@ -2,6 +2,32 @@
 
 {% block content %}
 
+    {# factor #}
+    <div class="py-40">
+        <div class="container">
+            {% for factor in factors %}
+                <div class="mb-32">
+                    {% view "@factor" with {
+                        factor:factor
+                    } %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    {# factor #}
+    <div class="py-40 bg-blue">
+        <div class="container">
+            {% for factor in factors2 %}
+                <div class="mb-32">
+                    {% view "@factor" with {
+                        factor:factor
+                    } %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
     {# form #}
     <div class="py-40">
         <div class="container">

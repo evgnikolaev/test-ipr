@@ -1,0 +1,32 @@
+.factor {
+  $root: &;
+
+  @include text-factor;
+
+  &--light {
+    color: $color-white;
+  }
+
+  &__content {
+
+  }
+
+  &__base {
+    display: flex;
+    align-items: center;
+    &:not(:last-child){
+      margin-bottom: rem(8);
+    }
+  }
+
+  &__text {
+    @include text-default;
+  }
+
+  &__label {
+
+  }
+
+  &__description {
+  }
+}

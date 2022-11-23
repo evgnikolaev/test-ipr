@@ -1,0 +1,21 @@
+$sal-animation-duration: 0.5s !default;
+$sal-animation-delay: 0.2s !default;
+$sal-slide-offset-Y: rem(40) !default;
+
+$sal-animation-duration-preloading: 0.5s !default;
+$sal-animation-delay-preloading: 2.5s !default;
+$sal-slide-offset-Y: rem(40) !default;
+
+[data-animate] {
+	transition-duration: $sal-animation-duration;
+	transition-delay: $sal-animation-delay;
+	transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+	transition-property: opacity, transform;
+	opacity: 0;
+	transform: translateY($sal-slide-offset-Y);
+
+	&.animate {
+		opacity: 1;
+		transform: none;
+	}
+}

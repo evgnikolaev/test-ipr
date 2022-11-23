@@ -441,5 +441,47 @@
       "required": true,
       "theme": "light"
     }
+  ],
+  "factors": [
+    {
+      "number": "13"
+    },
+    {
+      "number": "13",
+      "text": "программ обучения"
+    },
+    {
+      "number": "13",
+      "suffix": "+",
+      "text": "программ обучения"
+    },
+    {
+      "prefix": "+",
+      "number": "13",
+      "text": "программ обучения"
+    }
+  ],
+  "factors2": [
+    {
+      "number": "13",
+      "theme": "light"
+    },
+    {
+      "number": "13",
+      "text": "программ обучения",
+      "theme": "light"
+    },
+    {
+      "number": "13",
+      "suffix": "+",
+      "text": "программ обучения",
+      "theme": "light"
+    },
+    {
+      "prefix": "+",
+      "number": "13",
+      "text": "программ обучения",
+      "theme": "light"
+    }
   ]
 }

@@ -1,0 +1,24 @@
+<div class="factor{% if factor.theme %} factor--{{ factor.theme }}{% endif %}{% if factor.size %} factor--{{ factor.size }}{% endif %}{{ factor.mobString ? ' factor--mob-string' : '' }}{{ factor.textRight ? ' factor--text-right' : '' }}">
+    <div class="factor__content">
+        <div class="factor__base">
+            {% if factor.prefix %}
+                <p class="factor__prefix">{{ factor.prefix }}</p>
+            {% endif %}
+            {% if factor.number %}
+                <p class="factor__number"{% if not factor.counterless %} data-counter="{{ factor.number }}"{% endif %}>{{ factor.number }}</p>
+            {% endif %}
+            {% if factor.suffix %}
+                <p class="factor__suffix">{{ factor.suffix }}</p>
+            {% endif %}
+        </div>
+        {% if factor.text %}
+            <p class="factor__text">{{ factor.text }}</p>
+        {% endif %}
+        {% if factor.label %}
+            <p class="factor__label text-label">{{ factor.label }}</p>
+        {% endif %}
+    </div>
+    {% if factor.description %}
+        <p class="factor__description text-default">{{ factor.description }}</p>
+    {% endif %}
+</div>
