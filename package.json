@@ -14,8 +14,10 @@
 		"intersection-observer": "^0.7.0",
 		"jquery": "^3.6.1",
 		"parsleyjs": "^2.9.2",
+		"perfect-scrollbar": "^1.5.0",
 		"promise-polyfill": "^8.2.0",
 		"sal.js": "^0.6.6",
+		"select2": "^4.1.0-rc.0",
 		"smoothscroll-polyfill": "^0.4.4",
 		"vanilla-lazyload": "^15.1.1"
 	},

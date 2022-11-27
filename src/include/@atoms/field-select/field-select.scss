@@ -1,0 +1,67 @@
+.select-shell {
+	position: relative;
+
+	.parsley-errors-list {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		color: $color-error;
+		@include text-small;
+	}
+}
+
+select.select {
+	display: block;
+	width: 100%;
+	height: rem(50);
+	margin: 0;
+	padding-left: rem(28);
+	padding-right: rem(64);
+	border: 1px solid $color-white;
+	background-color: $color-white;
+	color: $color-black;
+	border-radius: 0;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	cursor: pointer;
+	@include text-default;
+
+	@include media-breakpoint-up(md) {
+		height: rem(60);
+	}
+
+	&--white {
+		background-color: $color-white;
+		border-color: $color-white;
+	}
+
+	&:not([multiple]) {
+		background-image: $icon-select-arrow;
+		background-repeat: no-repeat;
+		background-position: right rem(24) top 50%, 0 0;
+		background-size: rem(24) rem(24), 100%;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+
+	option {
+		background-color: $color-white;
+	}
+}
+
+select::-ms-expand {
+	display: none;
+}
+
+.select-shell {
+	position: relative;
+}
+

@@ -1,0 +1,263 @@
+.select2-hidden-accessible {
+	@include visually-hidden;
+}
+
+.select2-container {
+	position: relative;
+	display: inline-block;
+	min-width: rem(192);
+	@include text-default;
+
+	&--disabled {
+		opacity: 0.5;
+	}
+
+	.ps__rail-y,
+	.ps__thumb-y {
+		&::before {
+			top: rem(8);
+			bottom: rem(8);
+		}
+	}
+}
+
+.select2-selection {
+	$root: &;
+
+	display: flex;
+	align-items: center;
+	height: rem(60);
+	padding: 0 rem(44) 0 rem(24);
+	color: $color-black;
+	border: 2px solid $color-light-gray;
+	background-color: transparent;
+	cursor: pointer;
+	user-select: none;
+	@include defaultTransition(border-color);
+
+	@at-root select.parsley-error ~ .select2 & {
+		border-color: $color-error !important;
+	}
+
+	@at-root .select2-container:not(.select2-container--disabled) & {
+		@include media-breakpoint-up(lg) {
+			&:hover {
+				border-color: $color-blue;
+			}
+		}
+
+		&:focus {
+			border-color: $color-blue;
+		}
+	}
+
+	@at-root .select:not(.parsley-error) ~ .select2-container.select2-container--open & {
+
+	}
+
+	@at-root .select.parsley-error ~ .select2-container:not(.select2-container--disabled) & {
+		// TODO hover,focus error
+	}
+
+	@at-root .select2-container.select2-container--disabled & {
+		cursor: not-allowed;
+	}
+
+	// light theme
+	@at-root .select2-container.select2-container--light & {
+		background-color: $color-white;
+		border: 0;
+	}
+
+	@at-root .select2-container.select2-container--light:not(.select2-container--disabled) & {
+		&:focus {
+			border-color: transparent;
+		}
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&__rendered {
+		display: inline-block;
+		align-items: center;
+		width: 100%;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		@include text-default;
+		@include defaultTransition(color);
+
+		@at-root select.select[multiple] ~ .select2-container & {
+			color: $color-dark-grey;
+		}
+
+		@at-root select.select.something-selected[multiple] ~ .select2-container & {
+			color: $color-dark;
+		}
+
+		@at-root select.select[multiple] ~ .select2-container.select2-container--open & {
+			color: $color-dark;
+		}
+	}
+
+	&__placeholder {
+		color: $color-dark-grey;
+		@include defaultTransition(color);
+
+		@at-root .select:not(.parsley-error) ~ .select2-container.select2-container--open & {
+			color: $color-dark;
+		}
+	}
+
+	&__arrow {
+		position: absolute;
+		top: calc(50% - #{rem(12)});
+		right: rem(16);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: rem(24);
+		height: rem(24);
+		background-image: $icon-select-arrow;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		@include defaultTransition(transform);
+
+		b {
+			display: none;
+		}
+
+		@at-root .select2-container--open & {
+			transform: rotate(180deg);
+		}
+	}
+}
+
+.select2-dropdown {
+	$root: &;
+
+	position: absolute;
+	z-index: 1000;
+	display: block;
+	width: 100%;
+	border: 0;
+	color: $color-black;
+	background-color: $color-white;
+	box-shadow: rem(8) rem(8) rem(20) rgba(0, 0, 0, 0.15);
+}
+
+.select2-search--dropdown.select2-search--hide {
+	display: none;
+}
+
+.select2-results {
+	position: relative;
+	display: block;
+
+	&__options {
+		display: block;
+		position: relative;
+		max-height: rem(208);
+	}
+
+	&__option {
+		position: relative;
+		display: flex;
+		align-items: center;
+		padding: rem(15) rem(28) rem(20) rem(28);
+		width: 100%;
+		min-height: rem(60);
+		cursor: pointer;
+		color: $color-dark-grey;
+		background-color: transparent;
+		border-top: 1px solid $color-light;
+		word-break: break-word;
+		@include defaultTransition(color);
+
+		&.multi-checkboxes_wrap {
+			position: relative;
+			padding-left: rem(64);
+
+			&:before {
+				position: absolute;
+				display: block;
+				top: rem(16);
+				left: rem(24);
+				width: rem(24);
+				height: rem(24);
+				border: 2px solid $color-dark-grey;
+				content: "";
+				@include defaultTransition(border-color);
+			}
+		}
+
+		&--highlighted {
+			color: $color-dark;
+
+			&.multi-checkboxes_wrap:before {
+				border-color: $color-dark;
+			}
+		}
+
+		&--selected {
+			color: $color-dark;
+
+			&.multi-checkboxes_wrap:before {
+				border-color: $color-dark;
+				background-image: $icon-check;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: rem(14);
+			}
+		}
+	}
+
+	&__btn {
+		position: relative;
+		display: block;
+		width: 100%;
+		border: 0;
+		padding: rem(15) rem(28) rem(20) rem(64);
+		background-color: transparent;
+		cursor: pointer;
+		text-align: left;
+		color: $color-dark-grey;
+		@include text-default;
+		@include defaultTransition(color);
+
+		&:before {
+			position: absolute;
+			display: block;
+			top: rem(16);
+			left: rem(24);
+			width: rem(24);
+			height: rem(24);
+			border: 2px solid $color-dark-grey;
+			content: "";
+			@include defaultTransition(border-color);
+		}
+
+		&.is-selected {
+			&:before {
+				border-color: $color-dark;
+				background-image: $icon-check;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: rem(14);
+			}
+		}
+
+		@include media-breakpoint-up(lg) {
+			&:hover {
+				color: $color-dark;
+
+				&:before {
+					border-color: $color-dark;
+				}
+			}
+		}
+	}
+}

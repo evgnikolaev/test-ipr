@@ -1,5 +1,8 @@
 $color-white: #fff !default;
+
 $color-black: #202429 !default;
+$color-dark: $color-black;
+
 $color-error: red;
 
 $color-blue: #01519D !default;
@@ -8,6 +11,8 @@ $color-light-blue: #00BCFF !default;
 $color-gray: #8C9198 !default;
 $color-light-gray: #F4F5F8 !default;
 $color-light-gray2: #DCDEE1 !default;
+$color-dark-grey: $color-gray;
+$color-light: $color-light-gray;
 
 // Color system:
 // 'colorName': 'color'

@@ -331,6 +331,88 @@
   ],
   "form": [
     {
+      "select": true,
+      "id": "select-form-1",
+      "name": "select-form-1",
+      "attr": "data-attr",
+      "placeholder": "placeholder",
+      "required": true,
+      "options": [
+        {
+          "value": "value-1",
+          "text": "value-1"
+        },
+        {
+          "value": "value-2",
+          "text": "value-2"
+        },
+        {
+          "value": "value-3",
+          "text": "value-3"
+        },
+        {
+          "value": "value-4",
+          "text": "value-4"
+        }
+      ]
+    },
+    {
+      "select": true,
+      "id": "select-form-2",
+      "name": "select-form-2",
+      "attr": "data-attr",
+      "required": true,
+      "options": [
+        {
+          "selected": true,
+          "value": "value-1",
+          "text": "value-1"
+        },
+        {
+          "value": "value-2",
+          "text": "value-2"
+        },
+        {
+          "value": "value-3",
+          "text": "value-3"
+        },
+        {
+          "value": "value-4",
+          "text": "value-4"
+        },
+        {
+          "value": "value-5",
+          "text": "value-5"
+        }
+      ]
+    },
+    {
+      "select": true,
+      "id": "select-form-3",
+      "name": "select-form-3",
+      "attr": "data-attr",
+      "disabled": true,
+      "options": [
+        {
+          "selected": true,
+          "value": "value-1",
+          "text": "value-1"
+        },
+        {
+          "value": "value-2",
+          "text": "value-2"
+        },
+        {
+          "value": "value-3",
+          "text": "value-3"
+        },
+        {
+          "value": "value-4",
+          "text": "value-4"
+        }
+      ]
+    },
+    {
       "input": true,
       "id": "input-form-1",
       "name": "input-form-1",
@@ -352,20 +434,6 @@
       "type": "email",
       "placeholder": "E-mail",
       "required": true
-    },
-    {
-      "textarea": true,
-      "id": "textarea-form-1",
-      "name": "textarea-form-1",
-      "placeholder": "Описание",
-      "required": true
-    },
-    {
-      "textarea": true,
-      "id": "textarea-form-2",
-      "name": "textarea-form-2",
-      "placeholder": "Описание",
-      "disabled": true
     },
     {
       "checkbox": true,
@@ -384,6 +452,86 @@
   ],
   "form2": [
     {
+      "select": true,
+      "id": "select-form-4",
+      "name": "select-form-4",
+      "attr": "data-attr",
+      "required": true,
+      "theme": "light",
+      "options": [
+        {
+          "value": "value-1",
+          "text": "value-1"
+        },
+        {
+          "value": "value-2",
+          "text": "value-2"
+        },
+        {
+          "value": "value-3",
+          "text": "value-3"
+        },
+        {
+          "value": "value-4",
+          "text": "value-4"
+        }
+      ]
+    },
+    {
+      "select": true,
+      "id": "select-form-5",
+      "name": "select-form-5",
+      "attr": "data-attr",
+      "required": true,
+      "theme": "light",
+      "options": [
+        {
+          "selected": true,
+          "value": "value-1",
+          "text": "value-1"
+        },
+        {
+          "value": "value-2",
+          "text": "value-2"
+        },
+        {
+          "value": "value-3",
+          "text": "value-3"
+        },
+        {
+          "value": "value-4",
+          "text": "value-4"
+        }
+      ]
+    },
+    {
+      "select": true,
+      "id": "select-form-6",
+      "name": "select-form-6",
+      "attr": "data-attr",
+      "disabled": true,
+      "theme": "light",
+      "options": [
+        {
+          "selected": true,
+          "value": "value-1",
+          "text": "value-1"
+        },
+        {
+          "value": "value-2",
+          "text": "value-2"
+        },
+        {
+          "value": "value-3",
+          "text": "value-3"
+        },
+        {
+          "value": "value-4",
+          "text": "value-4"
+        }
+      ]
+    },
+    {
       "input": true,
       "id": "input-form-1",
       "name": "input-form-1",
@@ -407,22 +555,6 @@
       "type": "email",
       "placeholder": "E-mail",
       "required": true,
-      "theme": "light"
-    },
-    {
-      "textarea": true,
-      "id": "textarea-form-1",
-      "name": "textarea-form-1",
-      "placeholder": "Описание",
-      "required": true,
-      "theme": "light"
-    },
-    {
-      "textarea": true,
-      "id": "textarea-form-2",
-      "name": "textarea-form-2",
-      "placeholder": "Описание",
-      "disabled": true,
       "theme": "light"
     },
     {
