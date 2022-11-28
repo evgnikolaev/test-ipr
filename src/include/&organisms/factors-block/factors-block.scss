@@ -1,0 +1,37 @@
+.factors-block {
+  &__heading {
+    max-width: rem(530);
+    margin-bottom: rem(48);
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    @include media-breakpoint-down(md) {
+      display: block;
+    }
+  }
+
+  &__text {
+    max-width: rem(350);
+    @include media-breakpoint-down(md) {
+      margin-bottom: rem(45);
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 33.33%;
+    @include media-breakpoint-down(sm) {
+      width: 50%;
+      margin-bottom: rem(39);
+      @include last-row(2) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

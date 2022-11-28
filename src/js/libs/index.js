@@ -7,7 +7,7 @@ import Select from './select';
 document.addEventListener('DOMContentLoaded', () => {
 	Validation.init();
 	Mask.init();
-	Counter.init();
+	// Counter.init();
 	Sal.init();
 	Select.init();
 });

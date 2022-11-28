@@ -7,6 +7,10 @@
     color: $color-white;
   }
 
+  &--blue {
+    color: $color-blue;
+  }
+
   &__content {
 
   }
@@ -14,13 +18,18 @@
   &__base {
     display: flex;
     align-items: center;
-    &:not(:last-child){
+
+    &:not(:last-child) {
       margin-bottom: rem(8);
     }
   }
 
   &__text {
     @include text-default;
+
+    #{$root}--blue & {
+      color: $color-black;
+    }
   }
 
   &__label {

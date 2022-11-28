@@ -1,7 +1,9 @@
 {% extends "layouts::_page.twig" %}
 
 {% block content %}
-
-	main page
-
+    <div class="mb-64 mb-md-112">
+        {% view "&factors-block" with {
+            block:factorsBlock
+        } %}
+    </div>
 {% endblock %}

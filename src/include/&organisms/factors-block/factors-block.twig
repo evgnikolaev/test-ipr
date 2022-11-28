@@ -1,0 +1,23 @@
+<div class="factors-block">
+    <div class="container">
+        {% if block.heading %}
+            <div class="factors-block__heading h1">{{ block.heading }}</div>
+        {% endif %}
+        <div class="factors-block__content">
+            {% if block.text %}
+                <div class="factors-block__text text-default">{{ block.text }}</div>
+            {% endif %}
+            {% if block.factors %}
+                <div class="factors-block__items">
+                    {% for factor in block.factors %}
+                        <div class="factors-block__item">
+                            {% view "@factor" with {
+                                factor:factor
+                            } %}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
