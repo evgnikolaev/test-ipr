@@ -23,5 +23,80 @@
         "theme": "blue"
       }
     ]
+  },
+  "solutionBlock": {
+    "heading": "Кампус Корпоративного Университета",
+    "image": {
+      "src": "tmp/campus/solution-desctop.jpg",
+      "alt": "image alt",
+      "fill": true,
+      "tab": {
+        "srcset": [
+          {
+            "scale": "1",
+            "src": "tmp/campus/solution-tablet.png"
+          }
+        ]
+      },
+      "mob": {
+        "srcset": [
+          {
+            "scale": "1",
+            "src": "tmp/campus/solution-mobile.jpg"
+          }
+        ]
+      }
+    },
+    "action": {
+      "href": "javascript:void(0)",
+      "text": "Подробнее",
+      "title": "Подробнее",
+      "mobTheme": "blue",
+      "mobFit": true
+    },
+    "text": "Синтез знаний лучших экспертов Группы НЛМК и передового международного опыта. Наши решения являются ядром процесса управления знаниями Компании."
+  },
+  "campusBlock": {
+    "heading": "Кампус Корпоративного Университета",
+    "image": {
+      "src": "tmp/campus/desktop.png",
+      "alt": "image alt",
+      "fill": true,
+      "tab": {
+        "srcset": [
+          {
+            "scale": "1",
+            "src": "tmp/campus/tablet.png"
+          }
+        ]
+      },
+      "mob": {
+        "srcset": [
+          {
+            "scale": "1",
+            "src": "tmp/campus/mobile.png"
+          }
+        ]
+      }
+    },
+    "factors": [
+      {
+        "number": "490",
+        "text": "мест вместимость концертного зала",
+        "theme": "blue"
+      },
+      {
+        "number": "30",
+        "text": "учебных аудиторий",
+        "theme": "blue"
+      }
+    ],
+    "action": {
+      "href": "javascript:void(0)",
+      "text": "Подробнее",
+      "title": "Подробнее",
+      "mobTheme": "blue",
+      "mobFit": true
+    }
   }
 }

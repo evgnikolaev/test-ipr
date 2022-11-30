@@ -1,9 +1,23 @@
 {% extends "layouts::_page.twig" %}
 
 {% block content %}
+
     <div class="mb-64 mb-md-112">
         {% view "&factors-block" with {
             block:factorsBlock
         } %}
     </div>
+
+    <div class="mb-64 mb-md-112">
+        {% view "&campus" with {
+            block:solutionBlock
+        } %}
+    </div>
+
+    <div class="mb-64 mb-md-112">
+        {% view "&campus" with {
+            block:campusBlock
+        } %}
+    </div>
+
 {% endblock %}

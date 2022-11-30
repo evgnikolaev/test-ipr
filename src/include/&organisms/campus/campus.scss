@@ -1,0 +1,87 @@
+.campus {
+
+  &__image {
+    position: relative;
+    height: rem(665);
+
+    @include media-breakpoint-only(md) {
+      height: rem(561);
+    }
+    @include media-breakpoint-down(sm) {
+      height: rem(323);
+    }
+  }
+
+  &__content {
+    @include background-pane($color-white);
+
+    position: relative;
+    z-index: 1;
+    margin-top: rem(-136);
+
+    @include media-breakpoint-down(md) {
+      margin-top: rem(-96);
+    }
+  }
+
+
+  &__grid {
+    padding-top: rem(80);
+    padding-bottom: rem(80);
+
+    @include media-breakpoint-up(lg) {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: auto auto;
+      grid-template-areas: ". heading heading heading heading heading . factors factors factors factors factors" ". action action action action action . factors factors factors factors factors" ". . . . . . . factors factors factors factors factors";
+    }
+    @include media-breakpoint-only(md) {
+      padding-left: rem(60);
+      padding-right: rem(60);
+    }
+    @include media-breakpoint-down(sm) {
+      padding-top: rem(40);
+      padding-bottom: rem(40);
+      padding-left: rem(26);
+      padding-right: rem(26);
+    }
+  }
+
+  &__heading {
+    grid-area: heading;
+    margin-bottom: rem(34);
+  }
+
+  &__text{
+    grid-area: factors;
+    max-width: rem(360);
+    @include media-breakpoint-only(md){
+      margin-bottom: rem(74);
+    }
+    @include media-breakpoint-down(sm){
+      margin-bottom: rem(49);
+    }
+  }
+
+  &__factors {
+    grid-area: factors;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    @include media-breakpoint-down(md) {
+      margin-bottom: rem(34);
+    }
+  }
+
+  &__factor {
+    margin-bottom: rem(40);
+    max-width: rem(150);
+
+    @include last-row(2) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__action {
+    grid-area: action;
+  }
+}

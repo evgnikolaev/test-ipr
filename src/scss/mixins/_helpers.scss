@@ -11,3 +11,47 @@
 		@content;
 	}
 }
+
+
+@mixin background-pane($color) {
+  position: relative;
+
+  &:before,
+  &:after {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    height: 100%;
+    content: "";
+    background-color: $color;
+  }
+
+  &:before {
+    right: 50%;
+    width: rem(645);
+  }
+
+  &:after {
+    right: 0;
+    width: 51vw;
+  }
+
+  @include media-breakpoint-only(md) {
+    &:before {
+      left: rem(40);
+      right: auto;
+      width: calc(100% - #{rem(40)});
+    }
+  }
+  @include media-breakpoint-down(md) {
+    &:after {
+      content: none;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &:before {
+      left: rem(16);
+      width: calc(100% - #{rem(16)});
+    }
+  }
+}

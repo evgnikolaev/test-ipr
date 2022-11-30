@@ -21,6 +21,18 @@
     }
   }
 
+  &--mob-blue{
+    @include media-breakpoint-down(sm){
+      background-color: $color-blue;
+      color: #fff;
+    }
+  }
+  &--mob-fit{
+    @include media-breakpoint-down(sm){
+      width: 100%;
+    }
+  }
+
   &--light {
     border: 2px solid $color-light-blue;
     color: $color-white;

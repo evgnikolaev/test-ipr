@@ -1,0 +1,36 @@
+<div class="campus">
+    <div class="campus__image">
+        {% view "@image" with {
+            image: block.image
+        } %}
+    </div>
+    <div class="campus__content">
+        <div class="campus__grid container">
+            {% if block.heading %}
+                <div class="campus__heading h2">{{ block.heading }}</div>
+            {% endif %}
+            {% if block.text %}
+                <p class="campus__text text-default">{{ block.text }}</p>
+            {% endif %}
+            {% if block.factors %}
+                <div class="campus__factors">
+                    {% for factor in block.factors %}
+                        <div class="campus__factor">
+                            {% view '@factor' with {
+                                factor: factor
+                            } %}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% if block.action %}
+                <div class="campus__action">
+                    {% view '@button' with {
+                        button: block.action
+                    } %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+</div>
