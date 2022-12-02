@@ -21,14 +21,22 @@
     }
   }
 
-  &--mob-blue{
-    @include media-breakpoint-down(sm){
+  &--mob-light {
+    @include media-breakpoint-down(sm) {
+      background-color: $color-light-blue;
+      color: #fff;
+    }
+  }
+
+  &--mob-blue {
+    @include media-breakpoint-down(sm) {
       background-color: $color-blue;
       color: #fff;
     }
   }
-  &--mob-fit{
-    @include media-breakpoint-down(sm){
+
+  &--mob-fit {
+    @include media-breakpoint-down(sm) {
       width: 100%;
     }
   }

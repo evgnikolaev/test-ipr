@@ -1,0 +1,72 @@
+.request-block {
+  $root: &;
+
+
+  &__inner {
+    color: $color-white;
+    position: relative;
+    z-index: 1;
+    background-color: $color-blue;
+
+    @include media-breakpoint-up(lg) {
+      @include background-pane($color-blue);
+      background-color: transparent;
+      padding-top: rem(88);
+      padding-bottom: rem(100);
+    }
+    @include media-breakpoint-only(md) {
+      padding-top: rem(80);
+      padding-bottom: rem(80);
+    }
+    @include media-breakpoint-down(sm) {
+      padding-top: rem(64);
+      padding-bottom: rem(100);
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    @include media-breakpoint-up(lg) {
+      display: flex;
+    }
+
+  }
+
+  &__heading {
+    margin-bottom: rem(30);
+    @include media-breakpoint-up(lg) {
+      width: 33.33%;
+      padding-left: 8%;
+      padding-right: 12%;
+    }
+  }
+
+  &__text {
+    margin-bottom: rem(30);
+    @include media-breakpoint-up(lg) {
+      width: 33.33%;
+      padding-right: 12%;
+    }
+  }
+
+  &__action {
+    @include media-breakpoint-up(lg) {
+      width: 33.33%;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 30%;
+    height: 100%;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+
+  }
+
+}

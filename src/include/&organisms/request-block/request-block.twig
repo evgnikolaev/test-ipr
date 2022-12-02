@@ -1,0 +1,27 @@
+<div class="request-block">
+    <div class="request-block__inner">
+        <div class="container">
+            <div class="request-block__content">
+                {% if block.heading %}
+                    <div class="request-block__heading h2">{{ block.heading }}</div>
+                {% endif %}
+                {% if block.text %}
+                    <div class="request-block__text text-default">{{ block.text }}</div>
+                {% endif %}
+                {% if block.action %}
+                    <div class="block__action">
+                        {% view '@button' with {
+                            button: block.action
+                        } %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        <div class="request-block__image">
+            {% view "@image" with {
+                image: block.image
+            } %}
+        </div>
+    </div>
+
+</div>

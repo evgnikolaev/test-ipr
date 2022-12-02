@@ -98,5 +98,30 @@
       "mobTheme": "blue",
       "mobFit": true
     }
+  },
+  "requestBlock": {
+    "heading": "Помощь в выборе",
+    "action": {
+      "href": "javascript:void(0)",
+      "text": "Оставить заявку",
+      "title": "Оставить заявку",
+      "theme": "light",
+      "mobTheme": "light",
+      "mobFit": true
+    },
+    "text": "Если вам нужна консультация по образовательным решениям, оставьте заявку. Мы свяжемся с вами в самое ближайшее время.",
+    "image": {
+      "src": "tmp/request-block/desktop.png",
+      "alt": "image alt",
+      "fill": true,
+      "tab": {
+        "srcset": [
+          {
+            "scale": "1",
+            "src": "tmp/request-block/tablet.png"
+          }
+        ]
+      }
+    }
   }
 }
