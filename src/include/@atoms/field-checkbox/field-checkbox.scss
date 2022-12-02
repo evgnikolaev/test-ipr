@@ -102,7 +102,7 @@
     }
 
     #{$root}--light #{$root}__input:disabled ~ & {
-      border-color: rgba($color-white,0.5);
+      border-color: rgba($color-white, 0.5);
 
       &:after {
         background-image: $icon-check-white-disabled;
@@ -117,7 +117,7 @@
 
     #{$root}--radio #{$root}__input:disabled:checked ~ & {
       &:after {
-        background-color: rgba($color-white,0.5);
+        background-color: rgba($color-white, 0.5);
       }
     }
 
@@ -142,10 +142,10 @@
     #{$root}--light #{$root}__input:disabled ~ & {
       color: rgba($color-white, 0.5);
     }
+  }
 
-    & ~ .parsley-errors-list {
-      display: none;
-    }
+  & ~ .parsley-errors-list {
+    display: none;
   }
 }
 

@@ -123,5 +123,54 @@
         ]
       }
     }
+  },
+  "subscribeBlock": {
+    "heading": "Подписаться на рассылку",
+    "text": "Узнавайте первым о новых мероприятиях и программах университета. Только полезная информация и никакого спама",
+    "image": {
+      "src": "tmp/request-block/desktop.png",
+      "alt": "image alt",
+      "fill": true,
+      "tab": {
+        "srcset": [
+          {
+            "scale": "1",
+            "src": "tmp/request-block/tablet.png"
+          }
+        ]
+      }
+    },
+    "form": {
+      "id": "subscribe-form-id",
+      "method": "POST",
+      "action": "/",
+      "name": "subscribe-form",
+      "attr": "data-subscribe-form",
+      "field": {
+        "input": true,
+        "id": "subscribe-input-form-1",
+        "name": "subscribe-input-form-1",
+        "type": "email",
+        "placeholder": "Ваш e-mail",
+        "required": true,
+        "theme": "light"
+      },
+      "checkbox": {
+        "checkbox": true,
+        "id": "subscribe-checkbox-form-1",
+        "name": "subscribe-checkbox-form-1",
+        "text": "Согласен на обработку персональных данных",
+        "required": true,
+        "theme": "light"
+      },
+      "button": {
+        "type": "submit",
+        "text": "Подписаться",
+        "title": "Подписаться",
+        "theme": "light",
+        "mobTheme": "light",
+        "mobFit": true
+      }
+    }
   }
 }

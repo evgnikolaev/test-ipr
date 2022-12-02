@@ -1,0 +1,46 @@
+<div class="subscribe">
+    <div class="subscribe__inner">
+        <div class="container">
+            <div class="subscribe__content">
+                {% if subscribe.heading %}
+                    <div class="subscribe__heading h2">{{ subscribe.heading }}</div>
+                {% endif %}
+
+                <div class="subscribe__body">
+                    {% if subscribe.text %}
+                        <div class="subscribe__text text-default">{{ subscribe.text }}</div>
+                    {% endif %}
+
+                    <form{% if subscribe.form.id %} id="{{ subscribe.form.id }}" class="subscribe__form"{% endif %}{% if subscribe.form.method %} method="{{ subscribe.form.method }}" {% endif %}{% if subscribe.form.action %} action="{{ subscribe.form.action }}"{% endif %}{% if subscribe.form.name %} name="{{ subscribe.form.name }}"{% endif %}
+                            data-parsley-validate{% if subscribe.form.attr %} {{ subscribe.form.attr }}{% endif %}>
+                        <div class="subscribe__field">
+                            {% if subscribe.form.field %}
+                                {% view '@field' with {
+                                    field: subscribe.form.field
+                                } %}
+                            {% endif %}
+                            {% if subscribe.form.button %}
+                                {% view '@button' with {
+                                    button: subscribe.form.button
+                                } %}
+                            {% endif %}
+                        </div>
+                        {% if subscribe.form.checkbox %}
+                            <div class="subscribe__checkbox">
+                                {% view '@field' with {
+                                    field: subscribe.form.checkbox
+                                } %}
+                            </div>
+                        {% endif %}
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <div class="subscribe__image">
+            {% view "@image" with {
+                image: subscribe.image
+            } %}
+        </div>
+    </div>
+</div>
