@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.addEventListener('load', () => {
-	document.documentElement.classList.add('is-loading');
+	document.documentElement.classList.add('is-loaded');
 });
 
 window.addEventListener('reinit', () => {

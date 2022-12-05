@@ -1,0 +1,87 @@
+<div class="slider-card">
+    <div class="slider-card__inner">
+        {% if slider.slides|length > 1 %}
+            <div class="slider-card__init" data-slider-card>
+                <div class="swiper-container" data-slider>
+                    <div class="swiper-wrapper">
+                        {% for slide in slider.slides %}
+                            <div class="slider-card__slide swiper-slide">
+                                {% if slide.href %}
+                                    <a href="{{ slide.href }}" class="slider-card__link-fill"></a>
+                                {% endif %}
+                                <div class="container">
+                                    <div class="slider-card__content">
+                                        {% if slide.factor %}
+                                            <div class="slider-card__factor">
+                                                {% view '@factor' with {
+                                                    factor: slide.factor
+                                                } %}
+                                            </div>
+                                        {% endif %}
+                                        <div class="slider-card__info">
+                                            {% if slide.caption %}
+                                                <p class="slider-card__caption text-label color-grey">{{ slide.caption }}</p>
+                                            {% endif %}
+                                            {% if slide.text %}
+                                                <p class="slider-card__text">
+                                                    {{ slide.text }}</p>
+                                            {% endif %}
+                                        </div>
+                                        {% if slide.image %}
+                                            <div class="slider-card__image">
+                                                {% view '@image' with {
+                                                    image: slide.image
+                                                } %}
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="slider-card__pagination">
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="slider-card__arrows container">
+                    {% view '@nav-arrows' %}
+                </div>
+            </div>
+        {% else %}
+            <div class="slider-card__init">
+                <div class="slider-card__slide">
+                    {% if slider.slides|first.href %}
+                        <a href="{{ slide.href }}" class="slider-card__link-fill"></a>
+                    {% endif %}
+                    <div class="container">
+                        <div class="slider-card__content">
+                            {% if slider.slides|first.factor %}
+                                <div class="slider-card__factor">
+                                    {% view '@factor' with {
+                                        factor: slider.slides|first.factor
+                                    } %}
+                                </div>
+                            {% endif %}
+                            <div class="slider-card__info">
+                                {% if slider.slides|first.caption %}
+                                    <p class="slider-card__caption text-label color-grey">{{ slider.slides|first.caption }}</p>
+                                {% endif %}
+                                {% if slider.slides|first.text %}
+                                    <p class="slider-card__text">
+                                        {{ slider.slides|first.text }}</p>
+                                {% endif %}
+                            </div>
+                            {% if  slider.slides|first.image %}
+                                <div class="slider-card__image">
+                                    {% view '@image' with {
+                                        image: slider.slides|first.image
+                                    } %}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</div>

@@ -1,5 +1,41 @@
 {
   "title": "Главная",
+  "sliderCard": {
+    "slides": [
+      {
+        "factor": {
+          "number": "28",
+          "text": "март ‘21",
+          "theme": "blue"
+        },
+        "caption": "Новый курс",
+        "text": "Старт нового курса.<br>Развитие стратегического мышления: навыки и инструменты",
+        "href": "#1",
+        "image": {
+          "src": "tmp/slider-card/slider-card-image-1.jpg",
+          "alt": "alt image",
+          "fill": true,
+          "swiper_lazy": true
+        }
+      },
+      {
+        "factor": {
+          "number": "29",
+          "text": "март ‘21",
+          "theme": "blue"
+        },
+        "caption": "Новый курс2",
+        "href": "#2",
+        "text": "Старт нового курса2.<br>Развитие стратегического мышления: навыки и инструменты",
+        "image": {
+          "src": "https://place-hold.it/300x500",
+          "alt": "alt image",
+          "fill": true,
+          "swiper_lazy": true
+        }
+      }
+    ]
+  },
   "factorsBlock": {
     "heading": "Обучаем успешных руководителей",
     "text": "Синтез знаний лучших экспертов Группы НЛМК и передового международного опыта",
