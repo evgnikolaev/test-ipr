@@ -1,5 +1,73 @@
 {
   "title": "Главная",
+  "mainHero": {
+    "slides": [
+      {
+        "caption": "Официальная<br>церемония",
+        "heading": "Идеи<br>становятся<br>реальностью",
+        "image": {
+          "src": "tmp/main-hero/desktop.png",
+          "alt": "alt image",
+          "fill": true,
+          "tab": {
+            "srcset": [
+              {
+                "scale": "1",
+                "src": "tmp/main-hero/tablet.png"
+              }
+            ]
+          },
+          "mob": {
+            "srcset": [
+              {
+                "scale": "1",
+                "src": "tmp/main-hero/mobile.png"
+              }
+            ]
+          }
+        },
+        "action": {
+          "href": "javascript:void(0)",
+          "text": "Подробнее",
+          "title": "Подробнее",
+          "mobTheme": "blue",
+          "mobFit": true
+        }
+      },
+      {
+        "caption": "Официальная<br>церемония 2",
+        "heading": "Идеи<br>становятся<br>реальностью",
+        "image": {
+          "src": "tmp/main-hero/desktop.png",
+          "alt": "alt image",
+          "fill": true,
+          "tab": {
+            "srcset": [
+              {
+                "scale": "1",
+                "src": "tmp/main-hero/tablet.png"
+              }
+            ]
+          },
+          "mob": {
+            "srcset": [
+              {
+                "scale": "1",
+                "src": "tmp/main-hero/mobile.png"
+              }
+            ]
+          }
+        },
+        "action": {
+          "href": "javascript:void(0)",
+          "text": "Подробнее",
+          "title": "Подробнее",
+          "mobTheme": "blue",
+          "mobFit": true
+        }
+      }
+    ]
+  },
   "sliderCard": {
     "slides": [
       {

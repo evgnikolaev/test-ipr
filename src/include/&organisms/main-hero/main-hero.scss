@@ -1,0 +1,64 @@
+.main-hero {
+  $root: &;
+
+  &__init {
+    position: relative;
+  }
+
+  &__slide {
+    padding-bottom: rem(64);
+    overflow: hidden;
+    height: rem(800);
+    position: relative;
+  }
+
+  &__info {
+    padding-top: rem(220);
+    max-width: 50%;
+  }
+
+  &__caption {
+    margin-bottom: rem(40);
+  }
+
+  &__heading {
+    margin-bottom: rem(82);
+  }
+
+  &__action {
+  }
+
+
+  &__pagination {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+  }
+
+  &__pagination-inner {
+    position: relative;
+  }
+
+
+  &__image {
+    position: absolute;
+
+    width: rem(436);
+    height: rem(394);
+    right: rem(-120);
+    bottom: 0;
+    @include media-breakpoint-up(lg) {
+      top: rem(76);
+      right: rem(-16);
+      width: rem(982);
+      height: rem(724);
+    }
+    @include media-breakpoint-only(md) {
+      right: rem(-204);
+      bottom: rem(-66);
+      width: rem(760);
+      height: rem(620);
+    }
+  }
+
+}
