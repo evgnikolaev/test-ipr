@@ -1,11 +1,163 @@
 {
+  "menu": {
+    "logo": {
+      "href": "./",
+      "icon": {
+        "name": "logo",
+        "size": "fit"
+      }
+    },
+    "actions": [
+      {
+        "href": "javascript:void(0);",
+        "text": "Помощь",
+        "title": "Помощь",
+        "icon": {
+          "name": "24/question"
+        },
+        "iconLeft": true,
+        "not_line_animate": true,
+        "onlyIcon": true
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "En",
+        "title": "En",
+        "not_line_animate": true
+      },
+      {
+        "title": "Поиск",
+        "icon": {
+          "name": "24/magnifier"
+        },
+        "theme": "dark",
+        "not_line_animate": true,
+        "onlyIcon": true
+      }
+    ],
+    "navigation": [
+      {
+        "href": "javascript:void(0);",
+        "text": "Главная",
+        "active": true
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Университет",
+        "submenu": [
+          {
+            "href": "javascript:void(0);",
+            "text": "Об университете"
+          },
+          {
+            "href": "javascript:void(0);",
+            "text": "Руководство"
+          },
+          {
+            "href": "javascript:void(0);",
+            "text": "Преподаватели и спикеры"
+          },
+          {
+            "href": "javascript:void(0);",
+            "text": "Документы"
+          }
+        ]
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Кампус",
+        "submenu": [
+          {
+            "href": "javascript:void(0);",
+            "text": "Об университете"
+          },
+          {
+            "href": "javascript:void(0);",
+            "text": "Руководство"
+          },
+          {
+            "href": "javascript:void(0);",
+            "text": "Преподаватели и спикеры"
+          },
+          {
+            "href": "javascript:void(0);",
+            "text": "Документы"
+          }
+        ]
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Программы"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Мероприятия"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Медиа",
+        "submenu": [
+          {
+            "href": "javascript:void(0);",
+            "text": "Об университете"
+          },
+          {
+            "href": "javascript:void(0);",
+            "text": "Руководство"
+          },
+          {
+            "href": "javascript:void(0);",
+            "text": "Преподаватели и спикеры"
+          },
+          {
+            "href": "javascript:void(0);",
+            "text": "Документы"
+          }
+        ]
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Контакты"
+      }
+    ],
+    "links": [
+      {
+        "href": "javascript:void(0);",
+        "text": "Политика использования Cookies"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Дисклеймер"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Карта сайта"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Раскрытие информации"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Антикоррупционная политика"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Политика конфиденциальности"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Политика использования персональных данных"
+      }
+    ]
+  },
   "colors": [
     "white",
     "black"
   ],
-	"breakpoints": {
-		"md": 640,
-		"lg": 990
-	},
+  "breakpoints": {
+    "md": 640,
+    "lg": 990
+  },
   "placeholder": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
 }

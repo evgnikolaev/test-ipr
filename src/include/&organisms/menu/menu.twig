@@ -1,0 +1,78 @@
+<div class="menu" data-menu>
+	<div class="menu__container" data-menu-container>
+		{% if menu.actions %}
+			<div class="menu__top">
+				{% if menu.logo.href is not empty %}
+					<a class="menu__logo" href="{{ menu.logo.href }}" data-menu-action>
+						{% view '@icon' with {
+							icon: menu.logo.icon
+						} %}
+					</a>
+				{% else %}
+					<div class="menu__logo" data-menu-action>
+						{% view '@icon' with {
+							icon: menu.logo.icon
+						} %}
+					</div>
+				{% endif %}
+				<div class="menu__actions">
+					{% for action in menu.actions %}
+						<div class="menu__action" data-menu-action>
+							{% view '@link-action' with {
+								link: action
+							} %}
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		{% endif %}
+		<div class="menu__inner">
+			<div class="menu__content">
+				{% if menu.navigation %}
+					<ul class="menu__navigation">
+						{% for item in menu.navigation %}
+							<li class="menu__item" data-menu-item data-accordion>
+								{% if item.active %}
+									<span class="menu__link menu__link--active h3 color-blue">{{ item.text }}</span>
+								{% else %}
+									{% if item.submenu %}
+										<button type="button" class="menu__button h3" data-toggle>
+											{{ item.text }}
+											{% view '@icon' with {
+												icon: {
+													name: '24/arrow-down'
+												}
+											} %}
+										</button>
+										<div class="menu__submenu" data-content>
+											<ul class="menu__roll">
+												{% for subitem in item.submenu %}
+													<li class="menu__sub-item">
+														<a href="{{ subitem.href }}"
+														   class="menu__link text-default">{{ subitem.text }}</a>
+													</li>
+												{% endfor %}
+											</ul>
+										</div>
+									{% else %}
+										<a href="{{ item.href }}" class="menu__link h3">{{ item.text }}</a>
+									{% endif %}
+								{% endif %}
+							</li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+				{% if menu.links %}
+					<ul class="menu__links">
+						{% for item in menu.links %}
+							<li class="menu__item" data-menu-item>
+								<a href="{{ item.href }}" class="menu__link text-small color-grey">{{ item.text }}</a>
+							</li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+	<div class="menu__overlay" data-menu-close></div>
+</div>

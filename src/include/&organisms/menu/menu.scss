@@ -1,0 +1,229 @@
+.menu {
+	$root: &;
+
+	position: fixed;
+	z-index: $z-index-menu;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	font-size: 0;
+	line-height: 1;
+
+	&__container {
+		position: relative;
+		z-index: 1;
+		background-color: $color-white;
+		height: 100%;
+		transform: translateX(100%);
+
+		@include media-breakpoint-up(lg) {
+			width: 34.7%;
+		}
+		@include media-breakpoint-only(md) {
+			width: 57%;
+		}
+		@include media-breakpoint-up(md) {
+			margin-left: auto;
+		}
+
+		&:before {
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: rem(100);
+			background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 1) 100%);
+			content: "";
+		}
+	}
+
+	&__top {
+		position: absolute;
+		display: none;
+		z-index: 1;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: rem(96);
+
+		@include media-breakpoint-up(lg) {
+			padding-left: rem(108);
+		}
+		@include media-breakpoint-only(md) {
+			padding-left: rem(58);
+			padding-right: rem(58);
+		}
+		@include media-breakpoint-up(md) {
+			padding-top: rem(40);
+		}
+		@include media-breakpoint-down(sm) {
+			justify-content: flex-end;
+			padding-top: rem(22);
+			padding-right: rem(76);
+		}
+
+		& > :last-child {
+			margin-right: 0;
+		}
+
+		@at-root .menu-pinned & {
+			display: flex;
+
+		}
+	}
+
+	&__logo {
+		position: absolute;
+		display: block;
+		top: rem(10);
+		left: rem(16);
+		width: rem(68);
+		height: rem(54);
+
+		@include media-breakpoint-up(md) {
+			display: none;
+		}
+	}
+
+	&__actions {
+		display: flex;
+		align-items: flex-start;
+	}
+
+	&__action {
+		margin-right: rem(32);
+
+		@include media-breakpoint-up(lg) {
+			&:first-child:not(:last-child) {
+				margin-right: rem(84);
+			}
+		}
+		@include media-breakpoint-only(md) {
+			&:first-child:not(:last-child) {
+				margin-right: rem(72);
+			}
+		}
+		@include media-breakpoint-up(md) {
+			margin-right: rem(40);
+		}
+	}
+
+	&__inner {
+		position: relative;
+		padding: rem(128) rem(44) rem(64);
+		height: 100%;
+		overflow-y: auto;
+
+		@include media-breakpoint-up(lg) {
+			padding-top: rem(170);
+			padding-left: rem(108);
+		}
+		@include media-breakpoint-only(md) {
+			padding-top: rem(256);
+			padding-left: rem(58);
+			padding-right: rem(58);
+		}
+	}
+
+	&__navigation {
+		@include media-breakpoint-down(sm) {
+			&:not(:last-child) {
+				margin-bottom: rem(32);
+			}
+		}
+	}
+
+	&__links {
+		@include media-breakpoint-up(md) {
+			display: none;
+		}
+	}
+
+	&__item {
+		#{$root}__navigation & {
+			&:not(:last-child) {
+				margin-bottom: rem(16);
+			}
+
+			@include media-breakpoint-up(md) {
+				&:not(:last-child) {
+					margin-bottom: rem(24);
+				}
+			}
+		}
+
+		#{$root}__links & {
+			&:not(:last-child) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+
+	&__link {
+		display: inline-block;
+
+		@include media-breakpoint-up(lg) {
+			@include defaultTransition(color);
+
+			&:hover {
+				color: $color-blue;
+			}
+		}
+	}
+
+	&__submenu {
+		height: 0;
+		overflow: hidden;
+	}
+
+	&__roll {
+		padding-top: rem(16);
+		padding-bottom: rem(16);
+	}
+
+	&__sub-item {
+		&:not(:last-child) {
+			margin-bottom: rem(8);
+		}
+	}
+
+	&__button {
+		display: inline-block;
+		border: 0;
+		padding: 0;
+		background-color: transparent;
+		cursor: pointer;
+		text-align: left;
+		@include defaultTransition(color);
+
+		.icon {
+			margin-left: rem(10);
+			@include defaultTransition(transform);
+		}
+
+		@include media-breakpoint-up(lg) {
+			&:hover {
+				color: $color-blue;
+			}
+		}
+
+		#{$root}__item.active & {
+			color: $color-blue;
+
+			.icon {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	&__overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba($color-black, 0.2);
+	}
+}
