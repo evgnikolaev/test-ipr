@@ -1,5 +1,63 @@
-<header class="header"><br><br><br><br></header>
+<header class="header{{ headerLight ? ' header--light' : '' }}" role="banner">
+	<div class="header__container container">
+		{% if header.logo.href is not empty %}
+			<a class="header__logo" href="{{ header.logo.href }}">
+				{% view '@icon' with {
+					icon: header.logo.icon
+				} %}
+			</a>
+		{% else %}
+			<div class="header__logo">
+				{% view '@icon' with {
+					icon: header.logo.icon
+				} %}
+			</div>
+		{% endif %}
+		<nav class="header__navigation">
+			<ul class="header__items">
+				{% for item in header.navigation %}
+					<li class="header__item{{ item.submenu ? ' header__item--submenu' : '' }}"{% if item.submenu %} data-submenu-trigger{% endif %}>
+						{% if not item.active %}
+							<a href="{{ item.href }}"
+							   class="header__link text-default{{ not item.submenu ? ' has-not-submenu' : '' }}">{{ item.text }}</a>
+						{% else %}
+							<span class="header__link header__link--active text-default">{{ item.text }}</span>
+						{% endif %}
+						{% if item.submenu %}
+							<ul class="header__submenu">
+								{% for subitem in item.submenu %}
+									<li class="header__sub-item" data-submenu-item>
+										<a href="{{ subitem.href }}"
+										   class="header__link text-default">{{ subitem.text }}</a>
+									</li>
+								{% endfor %}
+							</ul>
+						{% endif %}
+					</li>
+				{% endfor %}
+			</ul>
+		</nav>
+		<div class="header__side">
+			{% if header.actions %}
+				<div class="header__actions">
+					{% for action in header.actions %}
+						<div class="header__action">
+							{% view '@link-action' with {
+								link: action
+							} %}
+						</div>
+					{% endfor %}
+				</div>
+			{% endif %}
+			<button type="button" class="header__hamburger" data-menu-opener>
+				<span data-menu-opener-lines></span>
+				<span data-menu-opener-cross></span>
+			</button>
+		</div>
+	</div>
+</header>
+
 <button type="button" class="hamburger" data-menu-opener data-hamburger-animate>
-    <span data-menu-opener-lines></span>
-    <span data-menu-opener-cross></span>
+	<span data-menu-opener-lines></span>
+	<span data-menu-opener-cross></span>
 </button>

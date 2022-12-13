@@ -21,6 +21,7 @@
 		"select2": "^4.1.0-rc.0",
 		"smoothscroll-polyfill": "^0.4.4",
 		"swiper": "^8.4.5",
+		"throttle-debounce": "^5.0.0",
 		"vanilla-lazyload": "^15.1.1"
 	},
 	"devDependencies": {
