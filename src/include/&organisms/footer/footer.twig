@@ -1,1 +1,84 @@
-<footer class="footer"></footer>
+<footer class="footer">
+    <div class="footer__top">
+        <div class="container">
+            <div class="footer__row">
+                <div class="footer__col">
+                    <div class="footer__logo">
+                        {% view "@icon" with {
+                            "icon":footer.logo.icon
+                        } %}
+                    </div>
+                    {% if footer.allSites %}
+                        <a href="{{ footer.allSites.href }}" class="footer__all-sites">{{ footer.allSites.text }}</a>
+                    {% endif %}
+                </div>
+                <div class="footer__col">
+                    <ul class="footer__menu">
+                        {% for item in footer.menu %}
+                            <li class="footer__menu-item">
+                                <a class="footer__link text-default" href="{{ item.href }}">{{ item.text }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    {% if footer.phone %}
+                        <a href="{{ footer.phone.href }}" class="footer__phone h3">{{ footer.phone.text }}</a>
+                    {% endif %}
+                    {% if footer.address %}
+                        <div class="footer__address text-small">{{ footer.address }}</div>
+                    {% endif %}
+                    {% if footer.email %}
+                        <a href="{{ footer.email.href }}" class="footer__email text-small color-blue">{{ footer.email.text }}</a>
+                    {% endif %}
+                    {% if footer.action %}
+                        <div class="footer__button">
+                            {% view "@button" with {
+                                button:footer.action
+                            } %}
+                        </div>
+                    {% endif %}
+                    {% if footer.social %}
+                        <div class="footer__social">
+                            {% for item in footer.social %}
+                                <a class="footer__social-item" href="{{ item.href }}">
+                                    {% view "@icon" with {
+                                        "icon":item.icon
+                                    } %}
+                                </a>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="footer__col">
+                    <ul class="footer__links">
+                        {% for item in footer.links %}
+                            <li class="footer__links-item">
+                                <a class="footer__link color-gray text-small" href="{{ item.href }}">{{ item.text }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer__bottom container">
+        {% if footer.copy %}
+            <div class="footer__copy">
+                {{ footer.copy }}
+            </div>
+        {% endif %}
+        {% if footer.report %}
+            <div class="footer__report">
+                {{ footer.report }}
+            </div>
+        {% endif %}
+        {% if footer.made %}
+            <div class="footer__made-in">
+                {{ footer.made }}
+            </div>
+        {% endif %}
+    </div>
+</footer>

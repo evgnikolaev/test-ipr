@@ -267,6 +267,127 @@
       }
     ]
   },
+  "footer": {
+    "logo": {
+      "icon": {
+        "name": "logo",
+        "size": "fit"
+      }
+    },
+    "allSites": {
+      "href": "javascript:void(0)",
+      "text": "Все сайты НЛМК"
+    },
+    "menu": [
+      {
+        "href": "javascript:void(0);",
+        "text": "Об университете"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Кампус"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Программы"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Мероприятия"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Медиа-центр"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Помощь"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Контакты"
+      }
+    ],
+    "links": [
+      {
+        "href": "javascript:void(0);",
+        "text": "Политика использования Cookies"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Дисклеймер"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Карта сайта"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Раскрытие информации"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Антикоррупционная политика"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Политика конфиденциальности"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Политика использования персональных данных"
+      }
+    ],
+    "phone": {
+      "href": "tel:+74742441111",
+      "text": "+7 4742 44 11 11"
+    },
+    "address": "пр.Мира, 22, Липецк",
+    "email": {
+      "href": "mailto:university@nlmk.com",
+      "text": "university@nlmk.com"
+    },
+    "action": {
+      "href": "javascript:void(0)",
+      "text": "Написать нам",
+      "title": "Написать нам",
+      "mobTheme": "blue",
+      "mobFit": true
+    },
+    "social": [
+      {
+        "href": "javascript:void(0)",
+        "icon": {
+          "name": "social/vk",
+          "size": "default"
+        }
+      },
+      {
+        "href": "javascript:void(0)",
+        "icon": {
+          "name": "social/fb",
+          "size": "default"
+        }
+      },
+      {
+        "href": "javascript:void(0)",
+        "icon": {
+          "name": "social/tg",
+          "size": "default"
+        }
+      },
+      {
+        "href": "javascript:void(0)",
+        "icon": {
+          "name": "social/instagram",
+          "size": "default"
+        }
+      }
+    ],
+    "copy": "© 2020 Корпоративный университет НЛМК",
+    "report": "Сообщить об ошибке. Нашли опечатку? Выделите фрагмент текст с ошибкой и нажмите сочетание клавиш Ctrl+Enter",
+    "made": "Сделано в uplab"
+  },
   "colors": [
     "white",
     "black"
