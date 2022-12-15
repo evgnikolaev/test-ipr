@@ -1,0 +1,20 @@
+<a href="{{ card.href }}"{% if card.id %} id="{{ card.id }}"{% endif%} class="card-news"{% if card.attr %} {{ card.attr }}{% endif %}>
+	<div class="card-news__image">
+		{% view '@image' with {
+			image: card.image
+		} %}
+	</div>
+	<div class="card-news__info">
+		{% if card.date or card.category %}
+			<div class="card-news__top">
+				{% if card.date %}
+					<p class="card-news__date text-label">{{ card.date }}</p>
+				{% endif %}
+				{% if card.category %}
+					<p class="card-news__category text-label color-grey">{{ card.category }}</p>
+				{% endif %}
+			</div>
+		{% endif %}
+		<p class="card-news__text text-default">{{ card.text }}</p>
+	</div>
+</a>

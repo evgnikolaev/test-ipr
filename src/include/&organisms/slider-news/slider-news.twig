@@ -1,0 +1,19 @@
+<div class="slider-news" data-slider-news>
+    <div class="slider-news__inner">
+        <div class="container">
+            <div class="slider-news__container">
+                <div class="swiper-container" data-slider>
+                    <div class="swiper-wrapper">
+                        {% for slide in slider.slides %}
+                            <div class="slider-news__slide swiper-slide">
+                                {% view '^card-news' with {
+                                    card: slide
+                                } %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

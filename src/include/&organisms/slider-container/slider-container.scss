@@ -1,0 +1,34 @@
+.slider-container {
+
+	&__top {
+		margin-bottom: rem(32);
+
+		@include media-breakpoint-up(md) {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			margin-bottom: rem(48);
+		}
+	}
+
+	&__heading {
+		@include media-breakpoint-up(md) {
+			max-width: 75%;
+		}
+		@include media-breakpoint-down(sm) {
+			&:not(:last-child) {
+				margin-bottom: rem(12);
+			}
+		}
+	}
+
+	&__bottom {
+		font-size: 0;
+		line-height: 1;
+		margin-top: rem(72);
+
+		@include media-breakpoint-up(md) {
+			margin-top: rem(40);
+		}
+	}
+}

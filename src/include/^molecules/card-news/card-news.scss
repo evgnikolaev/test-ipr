@@ -1,0 +1,59 @@
+.card-news {
+	$root: &;
+
+	display: block;
+
+	&__image {
+		position: relative;
+		min-height: rem(216);
+		max-height: rem(385);
+		overflow: hidden;
+		margin-bottom: rem(24);
+
+		@include media-breakpoint-up(md) {
+			max-height: rem(400);
+		}
+
+		.image {
+			@include media-breakpoint-up(lg) {
+				transform: none;
+			}
+
+			@at-root .is-loaded & {
+				transition: transform 0.8s cubic-bezier(0.475, 0.425, 0, 0.995);
+			}
+		}
+
+		#{$root}:hover & {
+			@include media-breakpoint-up(lg) {
+				.image {
+					transform: scale(1.04);
+				}
+			}
+		}
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-bottom: rem(16);
+	}
+
+	&__date {
+		&:not(:last-child) {
+			margin-right: rem(24);
+		}
+	}
+
+	&__info {
+		& > :last-child {
+			margin-bottom: 0;
+		}
+
+		@include media-breakpoint-up(md) {
+			padding-left: rem(16);
+			padding-right: rem(16);
+		}
+	}
+}

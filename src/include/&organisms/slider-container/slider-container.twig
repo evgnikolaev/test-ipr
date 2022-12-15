@@ -1,0 +1,23 @@
+<div class="slider-container">
+    {% if slider.heading or slider.link %}
+        <div class="container slider-container__top">
+            {% if slider.heading %}
+                <h2 class="slider-container__heading">{{ slider.heading }}</h2>
+            {% endif %}
+            {% if slider.link %}
+                <div class="slider-container__link">
+                    {% view '@link-action' with {
+                        link: slider.link
+                    } %}
+                </div>
+            {% endif %}
+        </div>
+    {% endif %}
+    <div class="slider-container__content">
+        {% if slider.name == 'slider-news' %}
+            {% view '&slider-news' with {
+                slider: slider
+            } %}
+        {% endif %}
+    </div>
+</div>

@@ -104,6 +104,78 @@
       }
     ]
   },
+  "sliderNews": {
+    "name": "slider-news",
+    "heading": "Последние публикации",
+    "link": {
+      "href": "javascript:void(0);",
+      "text": "Все публикации",
+      "title": "Все публикации",
+      "icon": {
+        "name": "24/arrow-right"
+      }
+    },
+    "slides": [
+      {
+        "id": "card-news-id-1",
+        "href": "javascript:void(0);",
+        "image": {
+          "src": "tmp/card-news/card-news-image-1.jpg",
+          "alt": "alt image"
+        },
+        "date": "23 декабря 2021",
+        "category": "фото",
+        "text": "Корпоративный университет НЛМК: инструмент кристаллизации накопленного опыта, практики и знаний"
+      },
+      {
+        "id": "card-news-id-2",
+        "href": "javascript:void(0);",
+        "image": {
+          "src": "tmp/card-news/card-news-image-2.jpg",
+          "alt": "alt image"
+        },
+        "date": "21 декабря 2021",
+        "category": "Интервью",
+        "text": "Корпоративный университет НЛМК: инструмент кристаллизации накопленного опыта, практики и знаний"
+      },
+      {
+        "id": "card-news-id-3",
+        "href": "javascript:void(0);",
+        "image": {
+          "src": "tmp/card-news/card-news-image-3.jpg",
+          "alt": "alt image"
+        },
+        "icon": {
+          "name": "72/play",
+          "size": "fit"
+        },
+        "date": "25 ноября 2021",
+        "category": "Новости",
+        "text": "Корпоративный университет Группы НЛМК стал членом международного сообщества EFMD"
+      },
+      {
+        "id": "card-news-id-4",
+        "href": "javascript:void(0);",
+        "image": {
+          "src": "tmp/card-news/card-news-image-4.jpg",
+          "alt": "alt image"
+        },
+        "date": "14 ноября 2021",
+        "category": "Новости",
+        "text": "Группа НЛМК и Фонд «Сколково» подписали соглашение о сотрудничестве"
+      },    {
+        "id": "card-news-id-4",
+        "href": "javascript:void(0);",
+        "image": {
+          "src": "tmp/card-news/card-news-image-4.jpg",
+          "alt": "alt image"
+        },
+        "date": "14 ноября 2021",
+        "category": "Новости",
+        "text": "Группа НЛМК и Фонд «Сколково» подписали соглашение о сотрудничестве"
+      }
+    ]
+  },
   "factorsBlock": {
     "heading": "Обучаем успешных руководителей",
     "text": "Синтез знаний лучших экспертов Группы НЛМК и передового международного опыта",

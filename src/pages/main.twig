@@ -2,20 +2,17 @@
 
 {% block content %}
 
-
     <div class="">
         {% view "&main-hero" with {
             slider:mainHero
         } %}
     </div>
 
-
     <div class="mb-64 mb-md-112">
         {% view "&slider-card" with {
             slider:sliderCard
         } %}
     </div>
-
 
     <div class="mb-64 mb-md-112">
         {% view "&factors-block" with {
@@ -38,6 +35,12 @@
     <div class="mb-64 mb-md-112">
         {% view "&campus" with {
             block:campusBlock
+        } %}
+    </div>
+
+    <div class="mb-md-96 mb-40">
+        {% view '&slider-container' with {
+            slider: sliderNews
         } %}
     </div>
 
