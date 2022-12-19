@@ -1,11 +1,9 @@
 .footer {
 
   &__top {
-    padding-top: rem(80);
     padding-bottom: rem(75);
 
     @include media-breakpoint-down(sm) {
-      padding-top: rem(48);
       padding-bottom: rem(44);
     }
   }
