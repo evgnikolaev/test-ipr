@@ -1,0 +1,64 @@
+.paginator {
+	$b: #{&};
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	@include media-breakpoint-down(sm) {
+		display: block;
+		overflow: hidden;
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+		list-style-type: none;
+		padding: 0;
+
+		@include media-breakpoint-down(sm) {
+			&:not(:last-child) {
+				margin-bottom: rem(32);
+			}
+		}
+	}
+
+	&__item {
+		width: rem(60);
+		height: rem(60);
+
+		&:not(:first-child) {
+			margin-left: -2px;
+		}
+	}
+
+	&__link {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 2px solid transparent;
+		@include defaultTransition(border-color);
+
+		&--active {
+			border-color: $color-blue;
+			pointer-events: none;
+		}
+
+		@include media-breakpoint-up(lg) {
+			&:not(&--disabled) {
+				&:hover {
+					border-color: $color-blue;
+				}
+			}
+		}
+	}
+
+	&__button {
+
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+		}
+	}
+}

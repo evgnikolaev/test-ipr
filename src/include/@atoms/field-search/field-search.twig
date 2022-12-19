@@ -1,0 +1,23 @@
+<div class="input-shell"
+	 data-search-field{% if field.search_box %} data-search-box="{{ field.search_box.url }}" data-search-box-type="{{ field.search_box.method }}"{% endif %}>
+	<input type="{{ field.type?: 'search' }}" name="{{ field.name }}"
+		   class="field-search__input
+           {% if field.class %} {{ field.class }}{% endif %}"
+		{% if field.required %} required data-pristine-required-message="{{ field.error.required?: messages.error.required }}"{% endif %}
+		{% if field.placeholder %} placeholder="{{ field.placeholder }}"{% endif %}
+		{% if field.readonly %} readonly{% endif %}
+		{% if field.disabled %} disabled{% endif %}
+		{% if field.value %} value="{{ field.value }}"{% endif %}
+		{% if field.autocomplete %} autocomplete="{{ field.autocomplete }}"{% endif %}{% if field.attr %} {{ field.attr }}{% endif %}
+	>
+	<button class="field-search__submit" type="submit">
+		{% view '@icon' with {
+			icon: {
+				name: "24/magnifier"
+			}
+		} %}
+	</button>
+	{% if field.search_box %}
+		<div class="field-search__box-results" data-search-box-results></div>
+	{% endif %}
+</div>

@@ -1,0 +1,27 @@
+<div class="filter" data-filter-container>
+    <form
+            class="filter__form"{% if filter.form.id %} id="{{ filter.form.id }}"{% endif %}{% if filter.form.method %} method="{{ filter.form.method }}"{% endif %}{% if filter.form.action %} action="{{ filter.form.action }}"{% endif %}{% if filter.form.name %} name="{{ filter.form.name }}"{% endif %}{% if filter.form.attr %} {{ filter.form.attr }}{% endif %}>
+        <div class="filter__top">
+            <div class="filter__container container">
+                {% if filter.search %}
+                    <div class="filter__search">
+                        {% view '@field-search' with {
+                            field: filter.search
+                        } %}
+                    </div>
+                {% endif %}
+                {% if filter.selects %}
+                    <div class="filter__selects">
+                        {% for select in filter.selects %}
+                            <div class="filter__select">
+                                {% view '@field' with {
+                                    field: select
+                                } %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </form>
+</div>

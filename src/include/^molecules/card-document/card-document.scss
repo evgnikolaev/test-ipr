@@ -1,0 +1,88 @@
+.card-document {
+	$root: &;
+
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	padding: rem(24) rem(24) rem(24) rem(56);
+	height: rem(116);
+	background-color: $color-white;
+	color: $color-dark;
+
+	@include media-breakpoint-up(lg) {
+		@include defaultTransition(background-color, color);
+
+		&:hover {
+			background-color: $color-blue;
+			color: $color-white;
+		}
+	}
+	@include media-breakpoint-up(md) {
+		padding: rem(20) rem(36) rem(20) rem(108);
+		height: rem(138);
+	}
+
+	&__icon {
+		position: absolute;
+		display: block;
+		top: rem(28);
+		left: rem(20);
+		width: rem(28);
+		height: rem(28);
+		color: $color-blue;
+
+		@include media-breakpoint-up(lg) {
+			@include defaultTransition(color);
+
+			path:last-child {
+				@include defaultTransition(fill);
+			}
+
+			#{$root}:hover & {
+				color: $color-white;
+
+				path:last-child {
+					fill: $color-light-blue;
+				}
+			}
+		}
+		@include media-breakpoint-up(md) {
+			top: 50%;
+			left: rem(30);
+			width: rem(56);
+			height: rem(56);
+			transform: translateY(-50%);
+		}
+	}
+
+	&__text {
+		max-width: rem(188);
+		@include line-clamp(14, 1.65, 3);
+
+		@include media-breakpoint-up(md) {
+			@include line-clamp(15, 1.5, 3);
+			align-self: center;
+			max-width: rem(344);
+		}
+	}
+
+	&__info {
+		color: $color-dark-grey;
+		white-space: nowrap;
+		margin-left: auto;
+		width: rem(52);
+
+		@include media-breakpoint-up(lg) {
+			@include defaultTransition(color);
+
+			#{$root}:hover & {
+				color: $color-white;
+			}
+		}
+		@include media-breakpoint-up(md) {
+			width: rem(64);
+			padding-top: rem(24);
+		}
+	}
+}

@@ -1,0 +1,35 @@
+{
+  "paginator": {
+		"items": [
+			{
+				"text": "1",
+				"href": "/?PAGEN_1=1",
+				"attr": " data-some-additional-attributes=''"
+			},
+			{
+				"text": "2",
+				"active": true,
+				"attr": " data-some-additional-attributes=''"
+			},
+			{
+				"href": "/?PAGEN_1=3",
+				"text": "3",
+				"attr": "data-some-additional-attributes=''"
+			},
+			{
+				"disabled": true,
+				"text": "...",
+				"attr": "data-some-additional-attributes=''"
+			},
+			{
+				"text": "123",
+				"href": "/?PAGEN_1=123",
+				"attr": "data-some-additional-attributes=''"
+			}
+		],
+    "button": {
+      "text": "Показать еще",
+      "attr": " data-some-additional-attributes='' "
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+	"breadcrumbs": {
+		"items": [
+			{
+				"href": "./",
+				"text": "Главная"
+			},
+			{
+				"href": "javascript:void(0);",
+				"text": "Кампус"
+			},
+			{
+				"current": true,
+				"text": ""
+			}
+		]
+	}
+}

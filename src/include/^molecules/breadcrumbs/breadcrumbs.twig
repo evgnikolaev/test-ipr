@@ -1,0 +1,15 @@
+<div class="breadcrumbs{% if breadcrumbs.theme %} breadcrumbs--{{ breadcrumbs.theme }}{% endif %}">
+	<ul class="breadcrumbs__list">
+		{% for item in breadcrumbs.items %}
+			{% if item.href %}
+				<li class="breadcrumbs__item" aria-current="page">
+					<a href="{{ item.href }}" class="breadcrumbs__link text-small">{{ item.text }}</a>
+				</li>
+			{% else %}
+				<li class="breadcrumbs__item breadcrumbs__item--active">
+					<span class="breadcrumbs__text text-small">{{ item.text }}</span>
+				</li>
+			{% endif %}
+		{% endfor %}
+	</ul>
+</div>

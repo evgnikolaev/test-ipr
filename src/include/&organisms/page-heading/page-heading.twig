@@ -1,0 +1,23 @@
+<div class="page-heading{{ heading.withFilter ? ' page-heading--with-filter' : '' }}{{ heading.action ? ' page-heading--has-action' : ''}}">
+	<div class="page-heading__container container">
+		{% if heading.breadcrumbs %}
+			<div class="page-heading__breadcrumbs">
+				{% view '^breadcrumbs' with {
+					breadcrumbs: heading.breadcrumbs
+				} %}
+			</div>
+		{% endif %}
+		<div class="page-heading__content">
+			{% if heading.heading %}
+				<h1 class="page-heading__heading">{{ heading.heading }}</h1>
+			{% endif %}
+			{% if heading.action %}
+				<div class="page-heading__action">
+					{% view '@link-action' with {
+						link: heading.action
+					} %}
+				</div>
+			{% endif %}
+		</div>
+	</div>
+</div>

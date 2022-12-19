@@ -1,0 +1,265 @@
+{
+  "title": "Документы",
+  "subscribe": {
+    "heading": "Подписаться на рассылку",
+    "text": "Узнавайте первым о новых мероприятиях и программах университета. Только полезная информация и никакого спама",
+    "image": {
+      "src": "tmp/request-block/desktop.png",
+      "alt": "image alt",
+      "fill": true,
+      "tab": {
+        "srcset": [
+          {
+            "scale": "1",
+            "src": "tmp/request-block/tablet.png"
+          }
+        ]
+      }
+    },
+    "form": {
+      "id": "subscribe-form-id",
+      "method": "POST",
+      "action": "/",
+      "name": "subscribe-form",
+      "attr": "data-subscribe-form",
+      "field": {
+        "input": true,
+        "id": "subscribe-input-form-1",
+        "name": "subscribe-input-form-1",
+        "type": "email",
+        "placeholder": "Ваш e-mail",
+        "required": true,
+        "theme": "light"
+      },
+      "checkbox": {
+        "checkbox": true,
+        "id": "subscribe-checkbox-form-1",
+        "name": "subscribe-checkbox-form-1",
+        "text": "Согласен на обработку персональных данных",
+        "required": true,
+        "theme": "light"
+      },
+      "button": {
+        "type": "submit",
+        "text": "Подписаться",
+        "title": "Подписаться",
+        "theme": "light",
+        "mobTheme": "light",
+        "mobFit": true
+      }
+    }
+  },
+  "heading": {
+    "breadcrumbs": {
+      "items": [
+        {
+          "href": "./",
+          "text": "Главная"
+        },
+        {
+          "text": "Документы",
+          "active": true
+        }
+      ]
+    },
+    "heading": "Документы",
+    "action": {
+      "href": "javascript:void(0);",
+      "text": "Архив документов",
+      "title": "Архив документов",
+      "icon": {
+        "name": "24/arrow-right"
+      }
+    },
+    "withFilter": true
+  },
+  "documents": {
+    "items": [
+      {
+        "href": "javascript:void(0);",
+        "text": "Положение об Ученом совете Корпоративного университета",
+        "ext": "PDF",
+        "size": "123 kb"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Спартакиада 2019 с участием спортсменов всех цехов предприятия и компаний НЛМК",
+        "ext": "PDF",
+        "size": "345 kb"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Спартакиада 2019 с участием спортсменов всех цехов предприятия и компаний НЛМК, в&nbsp;три строчки",
+        "ext": "PDF",
+        "size": "1,2 mb"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Положение об Ученом совете",
+        "ext": "DOC",
+        "size": "678 kb"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Спартакиада 2019 с участием спортсменов всех цехов предприятия и компаний НЛМК, в&nbsp;три строчки",
+        "ext": "PDF",
+        "size": "1,2 mb"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Положение об Ученом совете",
+        "ext": "DOC",
+        "size": "678 kb"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Положение об Ученом совете Корпоративного университета",
+        "ext": "PDF",
+        "size": "123 kb"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Спартакиада 2019 с участием спортсменов всех цехов предприятия и компаний НЛМК",
+        "ext": "PDF",
+        "size": "345 kb"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Спартакиада 2019 с участием спортсменов всех цехов предприятия и компаний НЛМК, в&nbsp;три строчки",
+        "ext": "PDF",
+        "size": "1,2 mb"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Положение об Ученом совете",
+        "ext": "DOC",
+        "size": "678 kb"
+      }
+    ],
+    "paginator": {
+      "adaptive": true,
+      "items": [
+        {
+          "text": "1",
+          "href": "/?PAGEN_1=1",
+          "attr": "data-some-additional-attributes=''"
+        },
+        {
+          "text": "2",
+          "active": true,
+          "attr": "data-some-additional-attributes=''"
+        },
+        {
+          "href": "/?PAGEN_1=3",
+          "text": "3",
+          "attr": "data-some-additional-attributes=''"
+        },
+        {
+          "href": "/?PAGEN_1=4",
+          "text": "4",
+          "attr": "data-some-additional-attributes=''"
+        },
+        {
+          "text": "...",
+          "href": "/?PAGEN_1=4",
+          "attr": "data-some-additional-attributes=''"
+        },
+        {
+          "text": "123",
+          "href": "/?PAGEN_1=123",
+          "attr": "data-some-additional-attributes=''"
+        }
+      ],
+      "button": {
+        "text": "Показать еще",
+        "attr": "data-some-additional-attributes=''"
+      }
+    }
+  },
+  "filter": {
+    "form": {
+      "id": "filter-form-id",
+      "method": "POST",
+      "action": "/",
+      "name": "filter-form",
+      "attr": "data-filter-form"
+    },
+    "search": {
+      "name": "input-search",
+      "placeholder": "Поиск по документам"
+    },
+    "selects": [
+      {
+        "select": true,
+        "multiple": true,
+        "name": "select",
+        "attr": "data-attr",
+        "placeholder": "Вид документов",
+        "selectAll": true,
+        "options": [
+          {
+            "value": "Положения",
+            "text": "Положения"
+          },
+          {
+            "value": "Регламенты",
+            "text": "Регламенты"
+          },
+          {
+            "value": "Лицензии",
+            "text": "Лицензии"
+          },
+          {
+            "value": "Отчёты",
+            "text": "Отчёты"
+          }
+        ]
+      },
+      {
+        "select": true,
+        "multiple": true,
+        "name": "select",
+        "attr": "data-attr",
+        "placeholder": "Год",
+        "options": [
+          {
+            "value": "Актуальные",
+            "text": "Актуальные"
+          },
+          {
+            "value": "2021",
+            "text": "2021"
+          },
+          {
+            "value": "Предшествующие годы",
+            "text": "Предшествующие годы"
+          }
+        ]
+      },
+      {
+        "select": true,
+        "name": "select",
+        "attr": "data-attr",
+        "placeholder": "test",
+        "options": [
+          {
+            "value": "1",
+            "text": "Сначала новые"
+          },
+          {
+            "value": "value-2",
+            "text": "value-2"
+          },
+          {
+            "value": "value-3",
+            "text": "value-3"
+          },
+          {
+            "value": "value-4",
+            "text": "value-4"
+          }
+        ]
+      }
+    ]
+  }
+}

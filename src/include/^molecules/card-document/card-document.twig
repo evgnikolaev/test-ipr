@@ -1,0 +1,22 @@
+<a href="{{ card.href }}"{% if card.id %} id="{{ card.id }}"{% endif %} class="card-document"
+   target="_blank"{% if card.attr %} {{ card.attr }}{% endif %}>
+	<span class="card-document__icon">
+		{% view '@icon' with {
+			icon: {
+				name: '56/document',
+				size: 'fit'
+			}
+		} %}
+	</span>
+	<p class="card-document__text text-default">{{ card.text }}</p>
+	{% if card.ext or card.size %}
+		<div class="card-document__info">
+			{% if card.ext %}
+				<p class="card-document__ext text-default">{{ card.ext }}</p>
+			{% endif %}
+			{% if card.size %}
+				<p class="card-document__size text-default">{{ card.size }}</p>
+			{% endif %}
+		</div>
+	{% endif %}
+</a>

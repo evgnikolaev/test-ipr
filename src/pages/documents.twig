@@ -1,0 +1,27 @@
+{% extends "layouts::_page.twig" %}
+
+{% block content %}
+
+    {% view '&page-heading' with {
+        heading: heading
+    } %}
+
+    <div class="mb-md-48 mb-24 bg-white">
+        {% view '&filter' with {
+            filter: filter
+        } %}
+    </div>
+
+    <div class="mb-md-112 mb-64">
+        {% view '&document-list' with {
+            documents: documents
+        } %}
+    </div>
+
+    <div class="mb-lg-80 mb-md-96 mb-48">
+        {% view '&subscribe' with {
+            subscribe: subscribe
+        } %}
+    </div>
+
+{% endblock %}

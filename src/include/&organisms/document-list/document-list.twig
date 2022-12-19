@@ -1,0 +1,31 @@
+<div class="document-list">
+	<div class="container">
+		<div class="document-list__inner">
+			{% for card in documents.items %}
+				<div class="document-list__item">
+					{% view '^card-document' with {
+						card: card
+					} %}
+				</div>
+			{% endfor %}
+		</div>
+		{% if  documents.paginator or documents.action %}
+			<div class="document-list__bottom">
+				{% if documents.paginator %}
+					<div class="document-list__paginator">
+						{% view '^paginator' with {
+							paginator: documents.paginator
+						} %}
+					</div>
+				{% endif %}
+				{% if documents.action %}
+					<div class="document-list__action">
+						{% view '@button' with {
+							button: documents.action
+						} %}
+					</div>
+				{% endif %}
+			</div>
+		{% endif %}
+	</div>
+</div>

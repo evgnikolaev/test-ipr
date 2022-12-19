@@ -1,0 +1,56 @@
+.page-heading {
+	$root: &;
+
+	padding-top: rem(104);
+	padding-bottom: rem(32);
+	background-color: $color-white;
+
+	@include media-breakpoint-up(md) {
+		padding-top: rem(168);
+		padding-bottom: rem(56);
+	}
+
+	&--with-filter {
+		@include media-breakpoint-only(md) {
+			padding-bottom: rem(24);
+		}
+		@include media-breakpoint-down(sm) {
+			padding-bottom: rem(20);
+		}
+	}
+
+	&__breadcrumbs {
+		margin-bottom: rem(16);
+
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(32);
+		}
+	}
+
+	&__heading {
+		@include media-breakpoint-up(md) {
+			max-width: 66.6666%;
+		}
+		@include media-breakpoint-down(sm) {
+			&:not(:last-child) {
+				margin-bottom: rem(12);
+			}
+		}
+	}
+
+	&__content {
+		#{$root}--has-action & {
+			@include media-breakpoint-up(md) {
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-end;
+			}
+		}
+	}
+
+	&__action {
+		@include media-breakpoint-up(md) {
+			padding-bottom: rem(16);
+		}
+	}
+}

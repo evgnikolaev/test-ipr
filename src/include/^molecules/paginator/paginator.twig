@@ -1,0 +1,25 @@
+<div class="paginator{% if paginator.color %} paginator--{{ paginator.color }}{% endif %}" {{ paginator.attr }}>
+	<ul class="paginator__list">
+		{% for link in paginator.items %}
+			<li class="paginator__item{{ link.disabled ? ' paginator__item--disabled' : '' }}">
+				{% if link.href and not link.disabled %}
+					<a href="{{ link.href }}"
+					   class="paginator__link {% if link.active %}paginator__link--active{% endif %}" {{ link.attr }}
+					   aria-label="{{ link.text }}" title="{{ link.text }}">
+						{{ link.text }}
+					</a>
+				{% else %}
+					<span class="paginator__link{{ link.active ? ' paginator__link--active' : '' }}{{ link.disabled ? ' paginator__link--disabled' : '' }}" {{ link.attr }}
+						aria-label="{{ link.text }}" title="{{ link.text }}">
+						{{ link.text }}
+					</span>
+				{% endif %}
+			</li>
+		{% endfor %}
+	</ul>
+	{% if paginator.button %}
+		{% view '@button' with {
+			button: paginator.button|merge({ class: 'paginator__button' })
+		} %}
+	{% endif %}
+</div>
