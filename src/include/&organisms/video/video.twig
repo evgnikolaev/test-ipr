@@ -1,0 +1,28 @@
+<div class="video" data-animate-custom>
+    <div class="video__wrap">
+        <div class="video__frame">
+            {% if video.provider %}
+                <div class="video__player" data-player-video
+                     data-plyr-provider="{{ video.provider }}"
+                        {% if video.poster %} data-poster="{{ video.poster }}"{% endif %}
+                        {% if video.src %} data-plyr-embed-id="{{ video.src }}"{% endif %}
+                ></div>
+            {% else %}
+                <video class="video__player is-lazy" data-player-video
+                        {% if video.src %} data-src="{{ video.src }}"{% endif %}
+                        {% if video.poster %} data-poster="{{ video.poster }}"{% endif %}
+                        {% if video.type %} type="{{ video.type }}"{% endif %}
+                        {% if video.controls %} controls{% endif %}
+                        {% if video.autoplay %} autoplay playsinline{% endif %}
+                        {% if video.muted %} muted{% endif %}
+                        {% if video.loop %} loop{% endif %}
+                        {% if video.attr %} {{ video.attr }}{% endif %}
+                >
+                    {% for source in video.sources %}
+                        <source data-src="{{ source.src }}" {% if source.type %} type="{{ source.type }}"{% endif %} />
+                    {% endfor %}
+                </video>
+            {% endif %}
+        </div>
+    </div>
+</div>

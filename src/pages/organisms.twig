@@ -1,0 +1,20 @@
+{% extends "layouts::_page.twig" %}
+
+{% block content %}
+
+    {% view '&page-heading' with {
+        heading: heading
+    } %}
+
+    {# video #}
+    <div class="py-80">
+        <div class="container">
+            <code>&video</code>
+            {% view '&video' with {
+                player: player
+            } %}
+        </div>
+    </div>
+
+
+{% endblock %}

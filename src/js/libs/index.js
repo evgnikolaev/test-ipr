@@ -5,6 +5,7 @@ import Sal from './sal';
 import Select from './select';
 import Sliders from './slider';
 import Lazyload from './lazyload';
+import Plur from './plyr';
 
 document.addEventListener('DOMContentLoaded', () => {
 	Validation.init();
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	Select.init();
 	Sliders.init();
 	Lazyload.init();
+	Plur.init();
 });
 
 window.addEventListener('init.validation', () => {

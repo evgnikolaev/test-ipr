@@ -1,0 +1,57 @@
+.video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  overflow: hidden;
+
+  @include media-breakpoint-up(lg) {
+    height: rem(479);
+  }
+
+  &__wrap {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  &__frame {
+    width: 100%;
+    height: 100%;
+  }
+
+  .plyr {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+
+    &__poster {
+      background-size: cover;
+    }
+
+    &::after {
+      //content: '';
+      position: absolute;
+      bottom: rem(40);
+      right: rem(40);
+      width: rem(48);
+      height: rem(48);
+      border-radius: 50%;
+      background-color: $color-white;
+      background-image: $icon-hamburger-cross;
+      background-size: rem(16);
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+      z-index: 1;
+      opacity: 0;
+      pointer-events: none;
+      @include defaultTransition(background);
+    }
+
+    &.plyr--stopped::after {
+      opacity: 1;
+    }
+  }
+}

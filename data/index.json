@@ -20,6 +20,10 @@
       {
         "link": "atoms",
         "name": "Атомы"
+      },
+      {
+        "link": "organisms",
+        "name": "Organisms"
       }
     ],
     "Ресурсы": [
