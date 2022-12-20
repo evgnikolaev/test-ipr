@@ -1,0 +1,47 @@
+<div class="accordion{{ accordion.autoNumbering ? ' accordion--auto-numbering' }}{% if not accordion.autoNumbering and accordion.numerical %} accordion--numerical{% endif %}" data-accordion data-viewport-trigger>
+	<div class="container">
+		{% if accordion.heading %}
+			<div class="accordion__title h2">{{ accordion.heading }}</div>
+		{% endif %}
+		{% for item in accordion.items %}
+			<div class="accordion-row{% if item.active %} shown{% endif %}" data-accordion-row {{ item.attr }}
+				 data-animate="fade-in-up">
+				<button type="button" class="accordion-row__toggle" data-accordion-toggle>
+					{% if accordion.autoNumbering %}
+						<span class="accordion-row__number">
+							{% if loop.index < 10 %}
+								0{{ loop.index }}
+							{% else %}
+								{{ loop.index }}
+							{% endif %}
+						</span>
+					{% endif %}
+					{% if not accordion.autoNumbering and accordion.numerical and item.number %}
+						<span class="accordion-row__number">
+							{{ item.number }}
+						</span>
+					{% endif %}
+					{% if item.heading %}
+						<span class="accordion-row__toggle-text">{{ item.heading|raw }}</span>
+					{% endif %}
+					{% if item.caption %}
+						<span class="accordion-row__toggle-caption">{{ item.caption }}</span>
+					{% endif %}
+					<span class="accordion-row__toggle-icon"></span>
+				</button>
+				<div class="accordion-row__roll" {% if item.active %}style="display: block;"{% endif %}
+					 data-accordion-roll>
+					<div class="accordion-row__content">
+
+						{% if item.text %}
+							<div class="user-text" data-animate-user-text="repeat">
+								{{ item.text|raw }}
+							</div>
+						{% endif %}
+
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</div>

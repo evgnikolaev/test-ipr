@@ -31,7 +31,7 @@
 				{% if menu.navigation %}
 					<ul class="menu__navigation">
 						{% for item in menu.navigation %}
-							<li class="menu__item" data-menu-item data-accordion>
+							<li class="menu__item" data-menu-item{% if item.submenu %} data-accordion-menu data-accordion-menu-parent{% endif %}>
 								{% if item.active %}
 									<span class="menu__link menu__link--active h3 color-blue">{{ item.text }}</span>
 								{% else %}

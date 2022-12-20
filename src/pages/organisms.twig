@@ -6,13 +6,29 @@
         heading: heading
     } %}
 
+
+
+    {#    accordion menu   #}
+    {#    tab   #}
+    {#    карта   #}
+    {#    модалки   #}
+
+
+
+
+    {# accordion #}
+    <div class="py-80">
+        <div class="container">
+            <code>&accordion</code>
+            {% view '&accordion'  %}
+        </div>
+    </div>
+
     {# video #}
     <div class="py-80">
         <div class="container">
             <code>&video</code>
-            {% view '&video' with {
-                player: player
-            } %}
+            {% view '&video' %}
         </div>
     </div>
 
