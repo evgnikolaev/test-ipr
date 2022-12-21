@@ -40,6 +40,7 @@
 	}
 
 	@at-root .select2-container:not(.select2-container--disabled) & {
+		border-color: $color-gray;
 		@include media-breakpoint-up(lg) {
 			&:hover {
 				border-color: $color-blue;

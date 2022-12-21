@@ -7,22 +7,31 @@
     } %}
 
 
-
-    {#    accordion menu   #}
-    {#    tab   #}
     {#    карта   #}
     {#    модалки   #}
+    {# сверстать самому  https://html.uplab.digital/nlmk-education.frontend/dist/council.html #}
+    {# ajax #}
 
-
+    {# Табы и слайдер #}
+    <div class="py-80">
+        <div class="container">
+            <code>Табы и слайдер</code>
+        </div>
+        {% view '&slider-container' with {
+            slider: educationalSolutions
+        } %}
+    </div>
 
 
     {# accordion #}
     <div class="py-80">
         <div class="container">
             <code>&accordion</code>
-            {% view '&accordion'  %}
         </div>
+        {% view '&accordion' %}
+
     </div>
+
 
     {# video #}
     <div class="py-80">

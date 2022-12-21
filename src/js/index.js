@@ -15,6 +15,7 @@ import Video from './components/video';
 import Sliders from './components/slider';
 import './components/accordion';
 import AccordionMenu from './components/accordion-menu';
+import Tabs from './components/tabs';
 
 window.UPB = window.UPB || {};
 window.breakpoints = devices;
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	AccordionMenu.init();
 	Video.init();
 	Sliders.init();
+	Tabs.init();
 });
 
 window.addEventListener('load', () => {

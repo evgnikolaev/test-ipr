@@ -1,0 +1,75 @@
+.tabs {
+	$root: &;
+
+	position: relative;
+
+	&__list {
+		display: none;
+
+		@include media-breakpoint-up(md) {
+			display: flex;
+			align-items: center;
+		}
+
+		#{$root}--select-on-tablet & {
+			@include media-breakpoint-down(md) {
+				display: none;
+			}
+		}
+	}
+
+	&__button {
+		position: relative;
+		display: block;
+		height: rem(60);
+		color: rgba($color-black, 0.4);
+		background-color: transparent;
+		border: 0;
+		padding: 0;
+		border-bottom: 2px solid transparent;
+		cursor: pointer;
+		@include text-default;
+		@include defaultTransition(color, border-color);
+
+		@include media-breakpoint-up(lg) {
+			&:hover {
+				color: $color-black;
+			}
+		}
+
+		&:not(:last-child) {
+			margin-right: rem(40);
+		}
+
+		&--active {
+			cursor: default;
+			color: $color-black;
+			border-color: $color-blue;
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&__select {
+		@include media-breakpoint-up(md) {
+			display: none;
+		}
+		@include media-breakpoint-down(sm) {
+			margin-top: rem(32);
+		}
+
+		#{$root}--select-on-tablet & {
+			@include media-breakpoint-down(md) {
+				display: block;
+			}
+		}
+
+		.select2-container {
+			@include media-breakpoint-only(md) {
+				min-width: rem(264);
+			}
+		}
+	}
+}

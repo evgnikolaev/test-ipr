@@ -1,0 +1,37 @@
+<div
+        class="slider-cards{% if slider.type %} slider-cards--type-{{ slider.type }}{% endif %}{% if not slider.action %} slider-cards--offset{% endif %}">
+    <div class="slider-cards__content" data-slider-cards>
+        <div class="slider-cards__inner">
+            <div class="container">
+                <div class="slider-cards__wrapper">
+                    <div class="slider-cards__container">
+                        <div class="swiper-container" data-slider>
+                            <div class="swiper-wrapper">
+                                {% for slide in slider.slides %}
+                                    <div class="slider-cards__slide swiper-slide">
+                                        {% if slider.cardsName == 'card-syllabus' %}
+                                            {% view '^card-syllabus' with {
+                                                card: slide
+                                            } %}
+                                        {% endif %}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% if slider.slides|length > 1 %}
+            <div class="slider-cards__arrows container{% if slider.slides|length == 3 %} d-lg-none{% endif %}{% if slider.slides|length == 2 %} d-lg-none{% endif %}">
+                {% view '@nav-arrows' with {
+                    nav_arrows: {
+                        counter: "true",
+                        theme: "grey",
+                        stretch: "true"
+                    }
+                } %}
+            </div>
+        {% endif %}
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="tabs{{ tabs.selectOnTablet ? ' tabs--select-on-tablet' : '' }}">
+	<div class="tabs__list">
+		{% for tab in tabs.list %}
+			<button class="tabs__button{{ tab.active ? ' tabs__button--active' : '' }}" type="button" data-tab="{{ loop.index0 }}">
+				<span class="tabs__text text-quote">{{ tab.text }}</span>
+			</button>
+		{% endfor %}
+	</div>
+	<div class="tabs__select">
+		<select name="{{ tabs.select.name }}" id="{{ tabs.select.id }}" class="select"
+				data-select-size="{{ tabs.select.size ?: 'default' }}"
+				data-select-theme="{{ tabs.select.theme ?: '' }}"
+				data-tabs-select>
+			{% for option in tabs.select.options %}
+				<option value="{{ loop.index0 }}"
+						{% if option.selected %} selected{% endif %}
+						{% if option.disabled %} disabled{% endif %}
+						{% if option.href %} data-href="{{ option.href }}"{% endif %}>
+					{{ option.text }}
+				</option>
+			{% endfor %}
+		</select>
+	</div>
+</div>
+

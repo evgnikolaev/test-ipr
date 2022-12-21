@@ -1,0 +1,71 @@
+{% if card.href %}
+	<a href="{{ card.href }}" class="card-syllabus"{% if card.id %} id="{{ card.id }}"{% endif %}>
+		<div class="card-syllabus__image">
+			{% view '@image' with {
+				image: card.image
+			} %}
+		</div>
+		<div class="card-syllabus__info">
+			<div class="card-syllabus__content">
+				{% if card.label %}
+					<p class="card-syllabus__label text-label color-dark-grey">{{ card.label }}</p>
+				{% endif %}
+				{% if card.heading %}
+					<p class="card-syllabus__heading">{{ card.heading }}</p>
+				{% endif %}
+				{% if card.text %}
+					<div class="card-syllabus__text color-dark-grey">{{ card.text }}</div>
+				{% endif %}
+			</div>
+			{% if card.items %}
+				<div class="card-syllabus__items">
+					{% for item in card.items %}
+						<p class="card-syllabus__item color-blue">{{ item }}</p>
+					{% endfor %}
+				</div>
+			{% endif %}
+		</div>
+		{% if card.items %}
+			<div class="card-syllabus__items card-syllabus__items--bottom">
+				{% for item in card.items %}
+					<p class="card-syllabus__item">{{ item }}</p>
+				{% endfor %}
+			</div>
+		{% endif %}
+		<div class="card-syllabus__background"></div>
+	</a>
+{% else %}
+	<div class="card-syllabus"{% if card.id %} id="{{ card.id }}"{% endif %}>
+		<div class="card-syllabus__image">
+			{% view '@image' with {
+				image: card.image
+			} %}
+		</div>
+		<div class="card-syllabus__info">
+			{% if card.label %}
+				<p class="card-syllabus__label text-label color-dark-grey">{{ card.label }}</p>
+			{% endif %}
+			{% if card.heading %}
+				<p class="card-syllabus__heading text-lead">{{ card.heading }}</p>
+			{% endif %}
+			{% if card.text %}
+				<div class="card-syllabus__text color-dark-grey">{{ card.text }}</div>
+			{% endif %}
+			{% if card.items %}
+				<div class="card-syllabus__items">
+					{% for item in card.items %}
+						<p class="card-syllabus__item color-blue">{{ item }}</p>
+					{% endfor %}
+				</div>
+			{% endif %}
+		</div>
+		{% if card.items %}
+			<div class="card-syllabus__items card-syllabus__items--bottom">
+				{% for item in card.items %}
+					<p class="card-syllabus__item">{{ item }}</p>
+				{% endfor %}
+			</div>
+		{% endif %}
+		<div class="card-syllabus__background"></div>
+	</div>
+{% endif %}

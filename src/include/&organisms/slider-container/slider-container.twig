@@ -1,23 +1,50 @@
-<div class="slider-container">
-    {% if slider.heading or slider.link %}
-        <div class="container slider-container__top">
-            {% if slider.heading %}
-                <h2 class="slider-container__heading">{{ slider.heading }}</h2>
-            {% endif %}
-            {% if slider.link %}
-                <div class="slider-container__link">
-                    {% view '@link-action' with {
-                        link: slider.link
-                    } %}
-                </div>
+<div class="slider-container{% if slider.tabs and slider.sliders %} has-tabs{% endif %}{% if slider.name %} slider-container--{{ slider.name }}{% endif %}"{% if slider.tabs and slider.sliders %} data-tabs{% endif %}>
+
+    {% if not slider.tabs and not slider.sliders %}
+
+        {% if slider.heading or slider.link %}
+            <div class="container slider-container__top">
+                {% if slider.heading %}
+                    <h2 class="slider-container__heading">{{ slider.heading }}</h2>
+                {% endif %}
+                {% if slider.link %}
+                    <div class="slider-container__link">
+                        {% view '@link-action' with {
+                            link: slider.link
+                        } %}
+                    </div>
+                {% endif %}
+            </div>
+        {% endif %}
+        <div class="slider-container__content">
+            {% if slider.name == 'slider-news' %}
+                {% view '&slider-news' with {
+                    slider: slider
+                } %}
             {% endif %}
         </div>
+
+    {% else %}
+
+
+        <div class="container slider-container__top">
+            <div class="slider-container__tabs">
+                {% view '&tabs' with {
+                    tabs: slider.tabs
+                } %}
+            </div>
+        </div>
+        <div class="slider-container__content">
+            {% for item in slider.sliders %}
+                <div class="slider-container__pane{{ item.active ? ' active' : '' }}" data-pane="{{ loop.index0 }}">
+                    {% if slider.name == 'slider-cards' %}
+                        {% view '&slider-cards' with {
+                            slider: item
+                        } %}
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+
     {% endif %}
-    <div class="slider-container__content">
-        {% if slider.name == 'slider-news' %}
-            {% view '&slider-news' with {
-                slider: slider
-            } %}
-        {% endif %}
-    </div>
 </div>

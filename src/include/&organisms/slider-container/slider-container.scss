@@ -31,4 +31,10 @@
 			margin-top: rem(40);
 		}
 	}
+
+	&__pane {
+		&:not(.active) {
+			display: none;
+		}
+	}
 }

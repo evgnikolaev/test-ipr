@@ -1,0 +1,90 @@
+.slider-cards {
+	$root: &;
+
+	&--offset {
+		padding-bottom: rem(72);
+
+		@include media-breakpoint-up(md) {
+			padding-bottom: rem(100);
+		}
+	}
+
+	&__content {
+		position: relative;
+	}
+
+	&__inner {
+		overflow: hidden;
+
+		@include media-breakpoint-up(lg) {
+			padding-top: rem(10);
+			margin-top: rem(-10);
+		}
+	}
+
+	&__wrapper {
+
+	}
+
+	&__container {
+		margin-left: rem(-4);
+		margin-right: rem(-4);
+
+		.swiper-container {
+			overflow: visible;
+		}
+	}
+
+	&__slide {
+		height: auto;
+		padding-left: rem(4);
+		padding-right: rem(4);
+
+		@include media-breakpoint-only(md) {
+			width: rem(400);
+		}
+
+		.card-course {
+			height: 100%;
+
+			@include media-breakpoint-up(lg) {
+				@include defaultTransition(transform);
+
+				&:hover {
+					transform: translateY(#{rem(-10)});
+				}
+			}
+		}
+
+		.card-educational {
+			height: 100%;
+
+			@include media-breakpoint-up(lg) {
+				@include defaultTransition(transform);
+
+				&:hover {
+					transform: translateY(#{rem(-10)});
+				}
+			}
+		}
+	}
+
+	&__arrows {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: rem(-72);
+		display: flex;
+		justify-content: flex-end;
+		pointer-events: none;
+
+		@include media-breakpoint-up(md) {
+			bottom: rem(-100);
+		}
+
+		.nav-arrows {
+			pointer-events: auto;
+			width: 100%;
+		}
+	}
+}
