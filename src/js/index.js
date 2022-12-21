@@ -16,6 +16,7 @@ import Sliders from './components/slider';
 import './components/accordion';
 import AccordionMenu from './components/accordion-menu';
 import Tabs from './components/tabs';
+import Map from './components/map';
 
 window.UPB = window.UPB || {};
 window.breakpoints = devices;
@@ -29,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	Video.init();
 	Sliders.init();
 	Tabs.init();
+	Map.init();
 });
 
 window.addEventListener('load', () => {

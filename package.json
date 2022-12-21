@@ -23,7 +23,8 @@
 		"smoothscroll-polyfill": "^0.4.4",
 		"swiper": "^8.4.5",
 		"throttle-debounce": "^5.0.0",
-		"vanilla-lazyload": "^15.1.1"
+		"vanilla-lazyload": "^15.1.1",
+		"ymaps-touch-scroll": "^2.1.0"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.12.10",

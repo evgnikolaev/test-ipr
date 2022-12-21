@@ -1,0 +1,7 @@
+<div class="map-box" data-ymap-box
+	{% if map.center %} data-ymap-center="{{ map.center|json_encode }}"{% endif %}
+	{% if map.zoom %} data-ymap-zoom="{{ map.zoom }}"{% endif %}
+	{% if map.points %}
+		data-ymap-points='{{ map.points|json_encode }}'
+	{% endif %}
+></div>

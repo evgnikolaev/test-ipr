@@ -1,0 +1,49 @@
+.map-box {
+	height: rem(700);
+
+	@include media-breakpoint-up(lg) {
+		height: rem(628);
+	}
+	@include media-breakpoint-only(md) {
+		height: rem(900);
+	}
+}
+
+.ymaps-cluster {
+	position: relative;
+	width: rem(48);
+	height: rem(48);
+	margin-left: rem(-24);
+	transform: translateY(-100%);
+	color: $color-black;
+	background-color: $color-blue;
+	border-radius: 50%;
+
+	&__content {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: rem(24);
+		height: rem(24);
+		transform: translate(-50%, -50%);
+		white-space: nowrap;
+		background-color: $color-white;
+		color: $color-dark;
+		text-align: center;
+		border-radius: 50%;
+		font-size: rem(15);
+		line-height: rem(24);
+	}
+}
+
+.ymaps-placemark {
+	position: relative;
+	width: rem(48);
+	height: rem(48);
+	margin-left: rem(-24);
+	transform: translateY(-100%);
+	background-image: $icon-map-pin;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
