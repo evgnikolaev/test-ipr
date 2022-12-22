@@ -1,0 +1,31 @@
+<div{% if modal.id %} id="{{ modal.id }}"{% endif %}
+	class="modal modal--side-message mfp-hide{% if modal.class %} {{ modal.class }}{% endif %}{% if modal.attr %} {{ modal.attr }}{% endif %}"{% if modal.timer %} data-timer="{{ modal.timer }}"{% endif %}>
+	<div class="modal__wrapper">
+		<div class="modal__container">
+			<div class="modal__inner">
+				<div class="modal__content">
+					<button type="button" class="modal__close" title="Закрыть" data-modal-close>
+						{% view '@icon' with {
+							icon: {
+								name: "24/cross"
+							}
+						} %}
+					</button>
+					{% if modal.heading %}
+						<p class="modal__heading h2" data-ajax-heading>{{ modal.heading }}</p>
+					{% endif %}
+					{% if modal.text %}
+						<p class="text-lead modal__text" data-ajax-text>{{ modal.text }}</p>
+					{% endif %}
+					{% if modal.action %}
+						<div class="modal__action">
+							{% view '@button' with {
+								button: modal.action
+							} %}
+						</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

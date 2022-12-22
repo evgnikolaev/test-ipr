@@ -388,6 +388,81 @@
     "report": "Сообщить об ошибке. Нашли опечатку? Выделите фрагмент текст с ошибкой и нажмите сочетание клавиш Ctrl+Enter",
     "made": "Сделано в uplab"
   },
+  "modals": [
+    {
+      "name": "modal-message",
+      "id": "modal-error",
+      "heading": "Ошибка",
+      "text": "Попробуйте позже",
+      "action": {
+        "text": "Понятно",
+        "title": "Понятно",
+        "attr": "data-modal-close"
+      }
+    },
+    {
+      "name": "modal-side-message",
+      "id": "modal-side-message",
+      "heading": "Вы зарегистрированы!",
+      "text": "Мы отправили приглашение на ваш e-mail.<br><br>Для посещения мероприятия на входе вам нужно будет просто показать этот e-mail \u2028с экрана вашего смартфона.",
+      "action": {
+        "text": "Понятно",
+        "title": "Понятно",
+        "attr": "data-modal-close",
+        "mobFit": true,
+        "theme": "mob-blue"
+      }
+    },
+    {
+      "name": "modal-video",
+      "id": "modal-video",
+      "video": {
+        "href": "https://youtu.be/WzNbp9IOmDw",
+        "provider": "youtube",
+        "id": "https://youtu.be/WzNbp9IOmDw",
+        "poster": {
+          "src": "tmp/video/video-bg-3.jpg",
+          "alt": "alt image",
+          "fit": true,
+          "fill": true
+        }
+      }
+    },
+    {
+      "name": "modal-error",
+      "id": "modal-error-message",
+      "heading": "Сообщить об ошибке",
+      "form": {
+        "id": "form-modal-error-message",
+        "name": "form-modal-error-message",
+        "method": "POST",
+        "action": "/ajax/error/?repo=nlmk-education.frontend&status=success",
+        "attr": "data-ajax-form",
+        "fields": [
+          {
+            "label": "Текст с ошибкой",
+            "input": true,
+            "id": "form-error-modal-textarea-1",
+            "name": "form-error-modal-textarea-1",
+            "required": true,
+            "attr": "data-error-field"
+          },
+          {
+            "label": "Введите правильный вариант",
+            "input": true,
+            "id": "form-error-modal-textarea-2",
+            "name": "form-error-modal-textarea-2",
+            "required": true
+          }
+        ],
+        "submit": {
+          "type": "submit",
+          "text": "Отправить",
+          "title": "Отправить"
+        }
+      }
+    }
+  ],
   "colors": [
     "white",
     "black"

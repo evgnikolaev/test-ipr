@@ -17,6 +17,20 @@ import './components/accordion';
 import AccordionMenu from './components/accordion-menu';
 import Tabs from './components/tabs';
 import Map from './components/map';
+import ModalVideo from './components/modal-video';
+import FormHandler from './components/form-handler/form-handler';
+
+require('./components/modal');
+
+
+
+// Mock API
+import createServer from '../api/mock';
+
+if (process.env.NODE_ENV === 'development') {
+	createServer();
+}
+
 
 window.UPB = window.UPB || {};
 window.breakpoints = devices;
@@ -31,6 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	Sliders.init();
 	Tabs.init();
 	Map.init();
+	ModalVideo.init();
+	new FormHandler();
 });
 
 window.addEventListener('load', () => {

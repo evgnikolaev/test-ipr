@@ -24,6 +24,10 @@
       {
         "link": "organisms",
         "name": "Organisms"
+      },
+      {
+        "link": "modals",
+        "name": "Modals"
       }
     ],
     "Ресурсы": [

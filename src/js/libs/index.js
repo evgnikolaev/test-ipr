@@ -14,9 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	Lazyload.init();
 });
 
-window.addEventListener('init.validation', () => {
-	Validation.init();
-});
 
 window.addEventListener('init.mask', () => {
 	Mask.init();

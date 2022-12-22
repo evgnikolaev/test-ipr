@@ -1,0 +1,52 @@
+{% extends "layouts::_page.twig" %}
+
+{% block content %}
+
+    {# button #}
+    <div class="pt-144 pb-80">
+        <div class="container">
+            <div class="mb-24">
+                {% view '@button' with {
+                    button: {
+                        title: "Сообщение об ошибке",
+                        text: "Сообщение об ошибке",
+                        attr: "data-modal",
+                        href: "#modal-error-message"
+                    }
+                } %}
+            </div>
+            <div class="mb-24">
+                {% view '@button' with {
+                    button: {
+                        title: "Error",
+                        text: "Error",
+                        attr: "data-modal",
+                        href: "#modal-error"
+                    }
+                } %}
+            </div>
+            <div class="mb-24">
+                {% view '@button' with {
+                    button: {
+                        title: "Side success",
+                        text: "Side success",
+                        attr: "data-modal",
+                        href: "#modal-side-message"
+                    }
+                } %}
+            </div>
+            <div class="mb-24">
+                {% view '@button' with {
+                    button: {
+                        title: "Видео",
+                        text: "Видео",
+                        attr: "data-modal-video data-modal-src='98Bpmdn8QLg' data-provider='youtube' data-modal-poster='tmp/video/video-bg.jpg'",
+                        href: "#modal-video"
+                    }
+                } %}
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

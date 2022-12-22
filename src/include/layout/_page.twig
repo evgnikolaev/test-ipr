@@ -33,6 +33,16 @@
     {{ block('endPage') }}
 {% endif %}
 
+
+{% if modals %}
+    {% for modal in modals %}
+        {% view '&'~modal.name with {
+            modal: modal
+        } %}
+    {% endfor %}
+{% endif %}
+
+
 <script type="text/javascript" src="js/vendors~index.chunk.js?{{ date().getTime() }}" defer></script>
 <script type="text/javascript" src="js/index.js?{{ date().getTime() }}" defer></script>
 <script type="text/javascript" src="js/components.js?{{ date().getTime() }}" defer></script>

@@ -1,0 +1,51 @@
+<div{% if modal.id %} id="{{ modal.id }}"{% endif %}
+	class="modal modal--error mfp-hide{% if modal.class %} {{ modal.class }}{% endif %}{% if modal.attr %} {{ modal.attr }}{% endif %}"{% if modal.timer %} data-timer="{{ modal.timer }}"{% endif %}>
+	<div class="modal__wrapper">
+		<div class="modal__container">
+			<div class="modal__inner">
+				<div class="modal__content">
+					<button type="button" class="modal__close" title="Закрыть" data-modal-close>
+						{% view '@icon' with {
+							icon: {
+								name: "24/cross"
+							}
+						} %}
+					</button>
+					<div class="modal__base">
+						{% if modal.heading %}
+							<p class="modal__heading h2">{{ modal.heading }}</p>
+						{% endif %}
+
+						<form{% if modal.form.id %} id="{{ modal.form.id }}"{% endif %}
+							class="modal__form"{% if modal.form.method %} method="{{ modal.form.method }}" {% endif %}{% if modal.form.action %} action="{{ modal.form.action }}"{% endif %}{% if modal.form.name %} name="{{ modal.form.name }}"{% endif %}
+							data-parsley-validate{% if modal.form.attr %} {{ modal.form.attr }}{% endif %}>
+
+							{% for field in modal.form.fields %}
+								<div class="modal__field">
+									{% view '@field' with {
+										field: field
+									} %}
+								</div>
+							{% endfor %}
+
+							{% if modal.form.submit %}
+								<div class="modal__submit">
+									{% view '@button' with {
+										button: modal.form.submit
+									} %}
+								</div>
+							{% endif %}
+						</form>
+					</div>
+
+					<div class="modal__result">
+						<p class="modal__heading h2" data-ajax-heading></p>
+						<p class="modal__text" data-ajax-text></p>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>

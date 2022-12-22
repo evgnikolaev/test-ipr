@@ -1,0 +1,21 @@
+<div{% if modal.id %} id="{{ modal.id }}"{% endif %}
+	class="modal modal--video mfp-hide{% if modal.class %} {{ modal.class }}{% endif %}{% if modal.attr %} {{ modal.attr }}{% endif %}"{% if modal.timer %} data-timer="{{ modal.timer }}"{% endif %}>
+	<div class="modal__wrapper">
+		<button type="button" class="modal__close" title="Закрыть" data-modal-close>
+			{% view '@icon' with {
+				icon: {
+					name: "24/cross"
+				}
+			} %}
+		</button>
+		<div class="modal__base">
+			<div class="modal__video">
+				<div class="modal-player" data-modal-player>
+					<div class="modal-player__container" data-player>
+						<div class="modal-player__frame" data-frame></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
