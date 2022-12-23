@@ -1,0 +1,44 @@
+{% if activity.items %}
+    <div class="activity">
+        <div class="container">
+
+            <div class="activity__header">
+                {% if activity.heading %}
+                    <div class="activity__heading h2">
+                        {{ activity.heading }}
+                    </div>
+                {% endif %}
+                {% if activity.description %}
+                    <div class="activity__description text-default">
+                        {{ activity.description }}
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="activity__points">
+                <ul class="activity__items">
+                    {% for item in activity.items %}
+                        <li class="activity__item">
+                            <div class="activity__item-text">
+                                {{ item.text }}
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="activity__bottom text-small color-gray">
+                {% if activity.left %}
+                    <div class="activity__left">
+                        {{ activity.left }}
+                    </div>
+                {% endif %}
+                {% if activity.right %}
+                    <div class="activity__right">
+                        {{ activity.right }}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endif %}

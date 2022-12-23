@@ -1,0 +1,24 @@
+<div class="page-hero">
+    <div class="page-hero__container container">
+        {% if hero.breadcrumbs %}
+            <div class="page-hero__breadcrumbs">
+                {% view "^breadcrumbs" with {
+                    breadcrumbs:hero.breadcrumbs
+                } %}
+            </div>
+        {% endif %}
+        {% if hero.heading %}
+            <div class="page-hero__title h1">{{ hero.heading }}</div>
+        {% endif %}
+        {% if hero.text %}
+            <div class="page-hero__text text-default">{{ hero.text }}</div>
+        {% endif %}
+        {% if hero.image %}
+            <div class="page-hero__image">
+                {% view "@image" with {
+                    image:hero.image
+                } %}
+            </div>
+        {% endif %}
+    </div>
+</div>

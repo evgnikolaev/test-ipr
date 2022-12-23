@@ -1,0 +1,39 @@
+{% extends "layouts::_page.twig" %}
+
+{% block content %}
+
+    <div class="mb-lg-96 mb-md-96 mb-64">
+        {% view '&page-hero' with {
+            hero: heading
+        } %}
+    </div>
+
+    <div class="mb-lg-112 mb-md-96 mb-64">
+        {% view '&goals' with {
+            goals: goals
+        } %}
+    </div>
+
+    <div class="mb-lg-112 mb-md-96 mb-64">
+        {% view '&activity' with {
+            activity: activity
+        } %}
+    </div>
+
+
+    {# Переиспользуемый блок #}
+    <div class="mb-lg-112 mb-md-96 mb-64">
+        {% view '&document-list' with {
+            documents: documents
+        } %}
+    </div>
+
+    {# Переиспользуемый блок #}
+    <div class="mb-lg-80 mb-md-96 mb-48">
+        {% view '&subscribe' with {
+            subscribe: subscribe
+        } %}
+    </div>
+
+
+{% endblock %}

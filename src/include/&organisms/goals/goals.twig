@@ -1,0 +1,27 @@
+{% if goals.items %}
+    <div class="goals">
+        <div class="goals__container">
+            {% if goals.heading %}
+                <div class="goals__heading h2">
+                    <div class="container">{{ goals.heading }}</div>
+                </div>
+            {% endif %}
+        </div>
+        <ul class="goals__items">
+            <div class="container">
+                {% for goal in goals.items %}
+                    <li class="goals__item">
+                        <div class="goals__entity">
+                            {% if goal.counter %}
+                                <div class="goals__counter text-factor color-blue">{{ goal.counter }}</div>
+                            {% endif %}
+                            <div class="goals__info">
+                                <div class="goals__text">{{ goal.text }}</div>
+                            </div>
+                        </div>
+                    </li>
+                {% endfor %}
+            </div>
+        </ul>
+    </div>
+{% endif %}
