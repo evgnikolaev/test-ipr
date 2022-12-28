@@ -1,0 +1,22 @@
+<div{% if modal.id %} id="{{ modal.id }}"{% endif %} class="modal modal--persons mfp-hide">
+    <div class="modal__wrapper">
+        <div class="modal__container">
+            <div class="modal__content">
+                <button type="button" class="modal__close" title="Закрыть" data-modal-close>
+                    {% view '@icon' with {
+                        icon: {
+                            name: "24/cross"
+                        }
+                    } %}
+                </button>
+                <div class="modal__base">
+                    <div class="modal__slider">
+                        {% view "&slider-modal-persons" with {
+                            slider:modal
+                        } %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

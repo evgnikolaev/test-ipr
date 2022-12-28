@@ -1,0 +1,74 @@
+<div class="persons">
+    {% if persons.heading %}
+        <div class="persons__heading h2">
+            <div class="container">{{ persons.heading }}</div>
+        </div>
+    {% endif %}
+
+
+    <div class="persons__lg">
+        <div class="container">
+            <div class="persons__items">
+
+                {% set modalCounter = 0 %}
+                {% for person in persons.items %}
+                    <div class="persons__item">
+                        {% if person.href %}
+                            <a href="{{ person.href }}" {% if person.attr %} {{ person.attr }}{% endif %} data-modal-counter="{{ modalCounter }}">
+                                {% view "^card-person" with {
+                                    block:person
+                                } %}
+                            </a>
+                            {% set modalCounter = modalCounter + 1 %}
+                        {% else %}
+                            {% view "^card-person" with {
+                                block:person
+                            } %}
+                        {% endif %}
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="persons__md">
+        <div class="persons__slider slider-persons" data-slider-persons>
+            <div class="slider-persons__inner">
+                <div class="container">
+                    <div class="slider-persons__container">
+                        <div class="swiper-container" data-slider>
+                            <div class="swiper-wrapper">
+
+                                {% set modalCounter = 0 %}
+                                {% for person in persons.items %}
+                                    <div class="slider-persons__slide swiper-slide">
+                                        {% if person.href %}
+                                            <a href="{{ person.href }}" {% if person.attr %} {{ person.attr }}{% endif %} data-modal-counter="{{ modalCounter }}">
+                                                {% view "^card-person" with {
+                                                    block:person
+                                                } %}
+                                            </a>
+                                            {% set modalCounter = modalCounter + 1 %}
+                                        {% else %}
+                                            {% view "^card-person" with {
+                                                block:person
+                                            } %}
+                                        {% endif %}
+                                    </div>
+                                {% endfor %}
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% if persons.items|length > 1 %}
+                <div class="slider-persons__arrows container">
+                    {% view '@nav-arrows' %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>

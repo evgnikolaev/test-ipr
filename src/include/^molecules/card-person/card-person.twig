@@ -1,0 +1,19 @@
+<div class="card-leader">
+    <div class="card-leader__image">
+        {% view "@image" with {
+            image:block.image
+        } %}
+    </div>
+    <div class="card-leader__info">
+        {% if block.name %}
+            <div class="card-leader__name text-default">
+                {{ block.name }}
+            </div>
+        {% endif %}
+        {% if block.position %}
+            <div class="card-leader__position text-label color-gray">
+                {{ block.position }}
+            </div>
+        {% endif %}
+    </div>
+</div>

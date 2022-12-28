@@ -1,0 +1,44 @@
+<div class="slider-modal-persons" data-modal-slider-persons>
+    <div class="slider-modal-persons__inner">
+        <div class="container">
+            <div class="swiper-container" data-slider>
+                <div class="swiper-wrapper">
+                    {% for slide in slider.items %}
+                        <div class="slider-modal-persons__slide swiper-slide">
+                            <div class="slider-modal-persons__item">
+                                <div class="slider-modal-persons__image">
+                                    {% view "@image" with {
+                                        image:slide.image
+                                    } %}
+                                </div>
+                                <div class="slider-modal-persons__info">
+                                    {% if slide.name %}
+                                        <div class="slider-modal-persons__name h3">
+                                            {{ slide.name }}
+                                        </div>
+                                    {% endif %}
+                                    {% if slide.position %}
+                                        <div class="slider-modal-persons__position text-label color-gray">
+                                            {{ slide.position }}
+                                        </div>
+                                    {% endif %}
+                                    {% if slide.text %}
+                                        <div class="slider-modal-persons__text text-default">
+                                            {{ slide.text }}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% if persons.items|length > 1 %}
+        <div class="slider-modal-persons__arrows container">
+            {% view '@nav-arrows' %}
+        </div>
+    {% endif %}
+</div>
+

@@ -1,5 +1,5 @@
 import 'magnific-popup/dist/jquery.magnific-popup.min';
-import {disableScroll, enableScroll} from '../../utils/scroll';
+import { disableScroll, enableScroll } from '../../utils/scroll';
 
 export default function modalInit() {
 	const modal = document.querySelectorAll('[data-modal]');
@@ -15,6 +15,22 @@ export default function modalInit() {
 			overflowY: 'hidden',
 			closeBtnInside: false,
 			callbacks: {
+				beforeOpen() {
+					console.log('before');
+
+					if (el.hasAttribute('data-modal-persons')) {
+						const modalCounter = el.getAttribute(
+							'data-modal-counter'
+						);
+						if (modalCounter) {
+							window.dispatchEvent(
+								new CustomEvent('sliderModal:slideTo', {
+									detail: { counter: modalCounter },
+								})
+							);
+						}
+					}
+				},
 				open() {
 					console.log('openclick');
 					disableScroll();

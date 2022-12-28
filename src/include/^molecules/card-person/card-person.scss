@@ -1,0 +1,25 @@
+.card-leader {
+  &__image {
+    position: relative;
+    padding-bottom: 134%;
+    margin-bottom: rem(24);
+    @include media-breakpoint-down(sm) {
+      margin-bottom: rem(16);
+    }
+  }
+
+
+  &__info {
+    padding-left: rem(18);
+    @include media-breakpoint-down(sm){
+      padding-left: 0;
+    }
+  }
+
+  &__name {
+    margin-bottom: rem(15);
+    @include media-breakpoint-down(sm) {
+      margin-bottom: rem(16);
+    }
+  }
+}

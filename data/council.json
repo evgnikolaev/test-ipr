@@ -80,6 +80,87 @@
     "left": "В своей деятельности Ученый совет подотчетен Комитету по кадрам, вознаграждениям и социальной политике Ученого совета директоров и является консультативным органом.",
     "right": "Заседания Ученого совета проводятся в соответствии с планом работы на год, но не реже 2 раз в год."
   },
+  "persons": {
+    "heading": "Состав Ученого совета",
+    "items": [
+      {
+        "image": {
+          "src": "tmp/persons/bagrin.png",
+          "alt": "Олег Багрин",
+          "disable_lazy": true,
+          "fill": true
+        },
+        "name": "Олег Багрин",
+        "position": "Председатель ученого совета университета нлмк. Заместитель председателя совета директоров нлмк",
+        "href": "#modal-persons",
+        "attr": "data-modal data-modal-persons"
+      },
+      {
+        "image": {
+          "src": "tmp/persons/shekshnya.png",
+          "alt": "Станислав Шекшня",
+          "disable_lazy": true,
+          "fill": true
+        },
+        "name": "Станислав Шекшня",
+        "position": "ЧЛЕН СОВЕТА ДИРЕКТОРОВ НЛМК. НЕЗАВИСИМЫЙ ДИРЕКТОР."
+      },
+      {
+        "image": {
+          "src": "tmp/persons/fedoroshin.png",
+          "alt": "Григорий Федоришин",
+          "disable_lazy": true,
+          "fill": true
+        },
+        "name": "Григорий Федоришин",
+        "position": "ПРЕЗИДЕНТ НЛМК. ПРЕДСЕДАТЕЛЬ ПРАВЛЕНИЯ.",
+        "href": "#modal-persons",
+        "attr": "data-modal data-modal-persons"
+      },
+      {
+        "image": {
+          "src": "tmp/persons/archipov.png",
+          "alt": "Михаил Архипов",
+          "disable_lazy": true,
+          "fill": true
+        },
+        "name": "Михаил Архипов",
+        "position": "ВИЦЕ0ПРЕЗИДЕНТ ПО КАДРАМ И СИСТЕМЕ УПРАВЛЕНИЯ НЛМК"
+      },
+      {
+        "image": {
+          "src": "tmp/persons/katkalo.png",
+          "alt": "Валерий Катькало",
+          "disable_lazy": true,
+          "fill": true
+        },
+        "name": "Валерий Катькало",
+        "position": "ПЕРВЫЙ ПРОРЕКТОР НИУ ВШЭ"
+      },
+      {
+        "image": {
+          "src": "tmp/persons/satarova.png",
+          "alt": "Валентина Сатарова",
+          "disable_lazy": true,
+          "fill": true
+        },
+        "name": "Валентина Сатарова",
+        "position": "Руководитель Корпоративного университета НЛМК",
+        "href": "#modal-persons",
+        "attr": "data-modal data-modal-persons"
+      },
+      {
+        "image": {
+          "src": "tmp/persons/konovalova.png",
+          "alt": "Юлия Коновалова",
+          "disable_lazy": true,
+          "fill": true
+        },
+        "name": "Юлия Коновалова",
+        "position": "СЕКРЕТАРЬ УЧЕНОГО СОВЕТА. Руководитель направления \nпо учебно-методической работе"
+      }
+    ]
+  },
   "documents": {
     "heading": "Документы",
     "items": [

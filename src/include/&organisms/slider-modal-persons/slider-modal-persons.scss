@@ -1,0 +1,61 @@
+.slider-modal-persons {
+  &__inner {
+    overflow: hidden;
+    margin-bottom: rem(40);
+
+    @include media-breakpoint-down(sm){
+      margin-top: rem(50);
+    }
+    .swiper-container {
+      overflow: hidden;
+    }
+  }
+
+  &__item {
+    @include media-breakpoint-up(lg) {
+      display: flex;
+    }
+  }
+
+  &__image {
+    position: relative;
+    height: rem(424);
+    width: rem(316);
+    margin-bottom: rem(32);
+    @include media-breakpoint-up(lg) {
+      width: 25%;
+      margin-bottom: 0;
+    }
+  }
+
+
+  &__info {
+    padding-right: rem(20);
+    padding-left: rem(20);
+    @include media-breakpoint-up(lg) {
+      width: 75%;
+      padding-right: rem(120);
+      padding-left: rem(120);
+    }
+  }
+
+  &__name {
+    margin-bottom: rem(16);
+  }
+
+  &__position {
+    margin-bottom: rem(32);
+  }
+
+  &__text {
+    p {
+      margin-bottom: rem(16);
+    }
+  }
+
+  &__arrows {
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+}
